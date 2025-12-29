@@ -13,10 +13,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import FloatingChat from "@/components/FloatingChat";
+import Navbar from "@/components/Navbar";
 
 export default function HomePage() {
   return (
-    <main className="bg-background text-foreground">
+    <>
+      <Navbar />
+      <main className="bg-background text-foreground">
 
       {/* =========================
           2️⃣ HERO SECTION
@@ -27,12 +30,12 @@ export default function HomePage() {
           backgroundImage: 'url("/images/solar-support.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "780px"
+          minHeight: "400px"
         }}
       >
         <div className="absolute inset-0 bg-black/70"></div>
 
-        <div className="relative container mx-auto px-6 pt-32 text-center">
+        <div className="relative container mx-auto px-4 py-20 sm:px-6 sm:py-32 lg:t-32 text-center">
           <img
             src="/images/hello-solar-logo.jpeg"
             alt="Hello Solar Logo"
@@ -220,5 +223,6 @@ export default function HomePage() {
       <FloatingChat />
 
     </main>
+    </>
   );
 }
