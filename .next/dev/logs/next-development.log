@@ -1,23 +1,9 @@
-[00:00:20.242] Server  LOG     ✓ Ready in 12.2s
-[00:00:41.497] Server  LOG     ○ Compiling / ...
-[00:00:48.347] Server  WARN    ⚠ Cross origin request detected from 172.20.10.3 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:06.855] Server  LOG     ✓ Ready in 5.3s
+[00:00:15.287] Server  LOG     ○ Compiling / ...
+[00:00:32.167] Server  WARN    ⚠ Cross origin request detected from 172.20.10.3 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:04:33.593] Server  LOG     ✓ Compiled in 458ms
-[00:17:16.880] Server  LOG     ✓ Compiled in 235ms
-[00:17:49.324] Server  LOG     ✓ Compiled in 236ms
-[00:18:34.519] Server  LOG     ✓ Compiled in 429ms
-[00:18:54.877] Browser ERROR   ./src/app/page.tsx:227:1
-Parsing ecmascript source code failed
-  225 |     </main>
-  226 |   );
-> 227 | }
-      | ^
-  228 |
-
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-[00:19:19.771] Server  LOG     ✓ Compiled in 3.8s
-[00:19:26.947] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:19:26.947] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:19:27.167] Browser WARN    Image with src "/images/hello-solar-logo.jpeg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:19:55.114] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:19:55.114] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:00:32.503] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:33.744] Browser WARN    Image with src "/images/hello-solar-logo.jpeg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:52:50.234] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:52:50.480] Browser WARN    Image with src "/images/hello-solar-logo.jpeg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[04:19:14.719] Server  LOG     ✓ Compiled in 1220ms

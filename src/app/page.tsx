@@ -55,18 +55,20 @@ export default function HomePage() {
           </Badge>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+           <Link href="tel:09020935919">
             <Button
               size="lg"
-              className="bg-green-500 hover:bg-green-600"
+            className="border-white text-black hover:bg-white hover:text-yellow-400"
             >
               Call Our Agents
             </Button>
+           </Link>
+           
 
             <Link href="/chat">
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black"
+                className="border-white text-black hover:bg-white hover:text-yellow-400"
               >
                 Talk to AI Assistant
               </Button>
