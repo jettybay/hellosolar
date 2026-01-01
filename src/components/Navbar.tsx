@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
           <Image
-            src="/images/hello-solar-logo.jpeg"
+            src="/images/hello-solar-logo2.jpeg"
             alt="Hello Solar Logo"
             width={60}
             height={60}

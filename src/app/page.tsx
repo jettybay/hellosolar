@@ -37,9 +37,10 @@ export default function HomePage() {
 
         <div className="relative container mx-auto px-4 py-20 sm:px-6 sm:py-32 lg:t-32 text-center">
           <img
-            src="/images/hello-solar-logo.jpeg"
+            src="/images/hello-solar-logo2.jpeg"
             alt="Hello Solar Logo"
-            className="w-24 h-24 mx-auto mb-6"
+           
+            className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-yellow-300"
           />
 
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
