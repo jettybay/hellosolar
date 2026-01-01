@@ -8,3 +8,4 @@ Yes, long-term savings are significant.
 
 ### Are there payment plans?
 Yes, via Solar Slot partners.
+
