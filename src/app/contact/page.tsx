@@ -7,8 +7,8 @@ import {
   Mail,
   Facebook,
   Instagram,
-  Twitter,
   Linkedin,
+  X,
 } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 import Footer from "@/components/Footer";
@@ -92,12 +92,12 @@ export default function ContactPage() {
                   link="https://instagram.com/hellosolar"
                 />
                 <SocialIcon
-                  icon={<Twitter />}
-                  link="https://twitter.com/hellosolar"
+                  icon={<X />}
+                  link="https://x.com/TemidayoJames?t=EGXgDHxvANhxz-HSJo2SGQ&s=09"
                 />
                 <SocialIcon
                   icon={<Linkedin />}
-                  link="https://linkedin.com/company/hello-solar"
+                  link="https://www.linkedin.com/groups/13242144"
                 />
                 <SocialIcon
                   icon={<FaTiktok />}

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin, X } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
@@ -40,15 +40,15 @@ export default function Footer() {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://twitter.com/hellosolar"
+                href="https://x.com/TemidayoJames?t=EGXgDHxvANhxz-HSJo2SGQ&s=09"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
               >
-                <Twitter className="w-4 h-4" />
+                <X className="w-4 h-4" />
               </a>
               <a
-                href="https://linkedin.com/company/hello-solar"
+                href="https://www.linkedin.com/groups/13242144"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
