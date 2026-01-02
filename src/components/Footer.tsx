@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-gray-400">
       <div className="container mx-auto px-4 py-6 flex flex-col items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center text-center">
           {/* Company Info */}
           <div className="space-y-4">
           
@@ -18,7 +18,7 @@ export default function Footer() {
               Your trusted partner for 24/7 solar energy support, expert guidance, 
               and professional installation services.
             </p> */}
-            <p className="text-sm font-medium text-yellow-400">
+            <p className="text-sm font-medium text-yellow-400 text-center-md">
               A Subsidiary of Solar Slot Limited
             </p>
           </div>
@@ -87,8 +87,8 @@ export default function Footer() {
 
             {/* Social Media */}
             <div className="mt-1">
-              <h4 className="text-white font-medium mb-3">Follow Us</h4>
-              <div className="flex gap-3">
+              <h4 className="text-white font-medium mb-3 text-center">Follow Us</h4>
+              <div className="flex justify-center gap-3">
                 <a
                   href="https://facebook.com/hellosolar"
                   target="_blank"

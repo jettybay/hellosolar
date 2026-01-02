@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   PhoneCall,
   MapPin,
@@ -11,7 +10,6 @@ import {
   Shield,
   Bot,
   TrendingUp,
-  ChevronRight,
   ArrowRight,
   Clock,
   Users,
@@ -19,7 +17,6 @@ import {
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -31,94 +28,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetTitle,
-} from "@/components/ui/sheet";
-import { VisuallyHidden } from "@/components/ui/visually-hidden";
 import FloatingChat from "@/components/FloatingChat";
 import Footer from "@/components/Footer";
-
-// Navigation Component
-function Navbar() {
-  const navItems = [
-    { label: "Home", href: "/" },
-    { label: "How It Works", href: "/howitworks" },
-    { label: "Chat", href: "/chat" },
-    { label: "Contact", href: "tel:09020935919" },
-  ];
-
-  return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-3">
-          <Image
-            src="/images/hello-solar-logo2.jpeg"
-            alt="Hello Solar Logo"
-            width={50}
-            height={50}
-            className="rounded-full"
-          />
-          <span className="text-xl font-bold text-primary-700 hidden sm:block">
-            Hello Solar
-          </span>
-        </Link>
-
-        <nav className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <Button asChild className="bg-green-600 hover:bg-green-700">
-            <Link href="tel:09020935919">Call Now</Link>
-          </Button>
-        </nav>
-
-        <Sheet>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <ChevronRight className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-72">
-            <VisuallyHidden>
-              <SheetTitle>Mobile Navigation Menu</SheetTitle>
-            </VisuallyHidden>
-            <div className="flex flex-col space-y-6 mt-20 px-4">
-              <div className="flex flex-col space-y-4">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="text-lg text-gray-700 hover:text-primary-600 font-medium flex items-center gap-2"
-                  >
-                    {item.label}
-                    {item.label === "Contact" && (
-                      <PhoneCall className="w-4 h-4" />
-                    )}
-                  </Link>
-                ))}
-              </div>
-              <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                <Link href="tel:09020935919">
-                  <PhoneCall className="w-4 h-4 mr-2" />
-                  Call 09020935919
-                </Link>
-              </Button>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
-    </header>
-  );
-}
+import Navbar from "@/components/Navbar";
 
 // Step Card Component
 function StepCard({
@@ -283,7 +195,7 @@ function AddonCard({
   return (
     <Card className="hover:shadow-lg transition-all duration-300 border-yellow-200 bg-gradient-to-br from-yellow-50 to-white">
       <CardHeader>
-        <Badge variant="outline" className="w-fit bg-yellow-100 text-yellow-800">
+        <Badge className="w-fit bg-yellow-100 text-yellow-800 border-yellow-300">
           Add-On Service
         </Badge>
         <CardTitle className="text-xl mt-2">{title}</CardTitle>
@@ -318,8 +230,6 @@ function StatCard({
 }
 
 export default function HowItWorksPage() {
-  const [activeTab, setActiveTab] = useState("process");
-
   return (
     <>
       <Navbar />
@@ -351,35 +261,12 @@ export default function HowItWorksPage() {
                 in minutes.
               </p>
 
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button
-                  size="lg"
-                  className="bg-white text-green-700 hover:bg-green-50"
-                  asChild
-                >
-                  <Link href="tel:09020935919">
-                    <PhoneCall className="w-5 h-5 mr-2" />
-                    Call Now: 09020935919
-                  </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10"
-                  asChild
-                >
-                  <Link href="/chat">
-                    <Bot className="w-5 h-5 mr-2" />
-                    Chat with AI
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
 
-          {/* Wave Divider */}
+          {/* Wave Divider - Enhanced with more curves and better mobile visibility */}
           <div className="absolute bottom-0 left-0 right-0">
-            <svg
+          <svg
               viewBox="0 0 1440 120"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -692,6 +579,6 @@ export default function HowItWorksPage() {
         <FloatingChat />
       </main>
     </>
-  );
-}
+    );
+  }
 
