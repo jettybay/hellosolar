@@ -1,24 +1,39 @@
-# TODO - Fix Git Push Secret Issue
+# Todo List
 
-## Issue
-GitHub blocked the push because an OpenAI API key was detected in `.env.local`
+## Enhance Wave Divider in HowItWorks Page
 
-## Plan
-1. [x] Create .gitignore file with .env.local
-2. [x] Remove .env.local from git tracking
-3. [x] Amend the latest commit to exclude the secret
-4. [x] Force push to update the remote
+### Task: Make wave curve more visible and add more curves to the SVG wave divider
 
-## Steps Executed
-1. [x] Installed git-filter-repo
-2. [x] Ran `git filter-repo --invert-paths --path .env.local` to remove the file from git history
-3. [x] Re-added origin remote
-4. [x] Force pushed to remote
-5. [x] Committed and pushed .gitignore file
+**Status: IN PROGRESS**
 
-## Important Security Notice
-The exposed OpenAI API key has been removed from git history. However, since it was publicly exposed in a commit, you should:
-- **Rotate the OpenAI API key** (the one starting with `sk-proj-YeBGywSHDNziMt5uFyHaL1mlIKDX4_-vsiRSz614_TlqmKG-7Q7GfPnz6M4qktjjgnLznkcxLhT3BlbkF`)
-- Generate a new API key from https://platform.openai.com/api-keys
-- Update the `.env.local` file with the new key
+- [x] Read and analyze the current file (src/app/howitworks/page.tsx)
+- [x] Create plan for wave enhancement
+- [x] Get user approval for the plan
+- [ ] Implement the wave divider enhancement
+- [ ] Verify the changes work correctly
+
+---
+
+## Wave Divider Enhancement Plan
+
+### Changes to make:
+1. Update the SVG path to have more curves (additional control points)
+2. Make the wave more visible on mobile by increasing the wave height
+3. Add smoother Bézier curves for a more organic look
+
+### Target SVG Path:
+- More dramatic peaks and valleys
+- Height range: ~20px to ~85px (vs current ~45px to ~75px)
+- Additional control points for smoother curves
+
+---
+
+## ✅ COMPLETED
+**Status: COMPLETED**
+
+- [x] Read and analyze the current file (src/app/howitworks/page.tsx)
+- [x] Create plan for wave enhancement
+- [x] Get user approval for the plan
+- [x] Implement the wave divider enhancement
+- [x] Verify the changes work correctly
 

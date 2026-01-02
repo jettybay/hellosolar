@@ -1247,11 +1247,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function Navbar() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(8);
-    if ($[0] !== "76910a7e4af85436742e5ffe04e1672c759a978b9cf15efab3822d2acb832595") {
+    if ($[0] !== "43f0f62c59fdf10a68ce90768e9f81446ce646d9b48b84bcb8b92c5c288be09c") {
         for(let $i = 0; $i < 8; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "76910a7e4af85436742e5ffe04e1672c759a978b9cf15efab3822d2acb832595";
+        $[0] = "43f0f62c59fdf10a68ce90768e9f81446ce646d9b48b84bcb8b92c5c288be09c";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1261,16 +1261,20 @@ function Navbar() {
                 href: "/"
             },
             {
-                label: "Features",
-                href: "#features"
-            },
-            {
                 label: "How It Works",
-                href: "#how-it-works"
+                href: "./howitworks"
             },
             {
                 label: "Support",
                 href: "/chat"
+            },
+            {
+                label: "Products",
+                href: "#products"
+            },
+            {
+                label: "Contact",
+                href: "./contact"
             }
         ];
         $[1] = t0;
@@ -1286,13 +1290,13 @@ function Navbar() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     src: "/images/hello-solar-logo2.jpeg",
-                    alt: "Hello Solar Logo",
+                    alt: "Hello Solar",
                     width: 60,
                     height: 60,
-                    className: "rounded-full"
+                    className: "rounded-full border-2 border-yellow-300"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Navbar.tsx",
-                    lineNumber: 38,
+                    lineNumber: 41,
                     columnNumber: 65
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1300,13 +1304,13 @@ function Navbar() {
                     children: "Hello Solar"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Navbar.tsx",
-                    lineNumber: 38,
-                    columnNumber: 182
+                    lineNumber: 41,
+                    columnNumber: 204
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Navbar.tsx",
-            lineNumber: 38,
+            lineNumber: 41,
             columnNumber: 10
         }, this);
         $[2] = t1;
@@ -1320,7 +1324,7 @@ function Navbar() {
             children: navItems.map(_NavbarNavItemsMap)
         }, void 0, false, {
             fileName: "[project]/src/components/Navbar.tsx",
-            lineNumber: 45,
+            lineNumber: 48,
             columnNumber: 10
         }, this);
         $[3] = t2;
@@ -1339,17 +1343,17 @@ function Navbar() {
                     className: "h-6 w-6"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Navbar.tsx",
-                    lineNumber: 52,
+                    lineNumber: 55,
                     columnNumber: 97
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.tsx",
-                lineNumber: 52,
+                lineNumber: 55,
                 columnNumber: 61
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/Navbar.tsx",
-            lineNumber: 52,
+            lineNumber: 55,
             columnNumber: 10
         }, this);
         $[4] = t3;
@@ -1363,12 +1367,12 @@ function Navbar() {
                 children: "Mobile Navigation Menu"
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.tsx",
-                lineNumber: 59,
+                lineNumber: 62,
                 columnNumber: 26
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/Navbar.tsx",
-            lineNumber: 59,
+            lineNumber: 62,
             columnNumber: 10
         }, this);
         $[5] = t4;
@@ -1382,7 +1386,7 @@ function Navbar() {
             children: navItems.map(_NavbarNavItemsMap2)
         }, void 0, false, {
             fileName: "[project]/src/components/Navbar.tsx",
-            lineNumber: 66,
+            lineNumber: 69,
             columnNumber: 10
         }, this);
         $[6] = t5;
@@ -1413,48 +1417,48 @@ function Navbar() {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "self-center",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                    src: "/images/hello-solar-logo.jpeg",
-                                                    alt: "Hello Solar Logo",
-                                                    width: 60,
-                                                    height: 60,
-                                                    className: "rounded-full"
+                                                    src: "/images/hello-solar-logo2.jpeg",
+                                                    alt: "Hello Solar",
+                                                    width: 45,
+                                                    height: 45,
+                                                    className: "rounded-full border-2 border-yellow-300"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Navbar.tsx",
-                                                    lineNumber: 73,
+                                                    lineNumber: 76,
                                                     columnNumber: 360
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Navbar.tsx",
-                                                lineNumber: 73,
+                                                lineNumber: 76,
                                                 columnNumber: 331
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Navbar.tsx",
-                                        lineNumber: 73,
+                                        lineNumber: 76,
                                         columnNumber: 275
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Navbar.tsx",
-                                lineNumber: 73,
+                                lineNumber: 76,
                                 columnNumber: 227
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Navbar.tsx",
-                        lineNumber: 73,
+                        lineNumber: 76,
                         columnNumber: 216
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Navbar.tsx",
-                lineNumber: 73,
+                lineNumber: 76,
                 columnNumber: 129
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/Navbar.tsx",
-            lineNumber: 73,
+            lineNumber: 76,
             columnNumber: 10
         }, this);
         $[7] = t6;
@@ -1471,7 +1475,7 @@ function _NavbarNavItemsMap2(item_0) {
         children: item_0.label
     }, item_0.label, false, {
         fileName: "[project]/src/components/Navbar.tsx",
-        lineNumber: 81,
+        lineNumber: 84,
         columnNumber: 10
     }, this);
 }
@@ -1482,7 +1486,7 @@ function _NavbarNavItemsMap(item) {
         children: item.label
     }, item.label, false, {
         fileName: "[project]/src/components/Navbar.tsx",
-        lineNumber: 84,
+        lineNumber: 87,
         columnNumber: 10
     }, this);
 }
