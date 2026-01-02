@@ -4,5 +4,6 @@
   "/api/ask/route": "app/api/ask/route.js",
   "/chat/page": "app/chat/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/howitworks/page": "app/howitworks/page.js",
   "/page": "app/page.js"
 }

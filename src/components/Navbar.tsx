@@ -9,9 +9,10 @@ export default function Navbar() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
+    { label: "How It Works", href: "./howitworks" },
     { label: "Support", href: "/chat" },
+    { label: "Features", href: "#features" },
+    { label: "Contact", href: "./contact" },
   ];
 
   return (

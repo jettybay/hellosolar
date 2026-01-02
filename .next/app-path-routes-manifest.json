@@ -4,5 +4,6 @@
   "/api/ask/route": "/api/ask",
   "/chat/page": "/chat",
   "/favicon.ico/route": "/favicon.ico",
+  "/howitworks/page": "/howitworks",
   "/page": "/"
 }

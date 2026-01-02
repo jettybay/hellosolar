@@ -57,6 +57,12 @@
       "regex": "^/favicon\\.ico(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/howitworks",
+      "regex": "^/howitworks(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/howitworks(?:/)?$"
     }
   ],
   "dataRoutes": [],

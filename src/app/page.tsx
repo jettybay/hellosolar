@@ -14,6 +14,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import FloatingChat from "@/components/FloatingChat";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -205,22 +206,8 @@ export default function HomePage() {
         </Button>
       </section>
 
-      {/* =========================
-          6️⃣ FOOTER
-      ========================== */}
-      <footer className="bg-slate-950 text-gray-400 py-10">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-lg font-semibold text-white">
-            Hello Solar!
-          </p>
-          <p className="mt-2">
-            A Subsidiary of Solar Slot Limited
-          </p>
-          <p className="mt-4 text-sm">
-            © {new Date().getFullYear()} Hello Solar. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      {/* Footer */}
+      <Footer />
 
       {/* Floating Chat Component */}
       <FloatingChat />
