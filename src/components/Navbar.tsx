@@ -27,9 +27,9 @@ export default function Navbar() {
             height={60}
             className="rounded-full border-2 border-yellow-300"
           />
-          <span className="text-2xl font-bold text-primary-700 hidden sm:block">
+          {/* <span className="text-2xl font-bold text-primary-700 hidden sm:block">
             Hello Solar
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop Navigation */}
