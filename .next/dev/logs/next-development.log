@@ -240,3 +240,59 @@ Import traces:
 [01:17:07.285] Server  LOG     ✓ Compiled in 197ms
 [01:28:50.407] Server  LOG     ✓ Compiled in 161ms
 [01:36:41.772] Server  LOG     ✓ Compiled in 623ms
+[01:41:07.144] Server  LOG     ✓ Compiled in 343ms
+[01:47:15.099] Server  LOG     ✓ Compiled in 314ms
+[01:47:45.140] Server  LOG     ✓ Compiled in 250ms
+[01:48:04.225] Server  LOG     ✓ Compiled in 456ms
+[01:48:08.990] Server  LOG     ✓ Compiled in 267ms
+[01:48:14.861] Server  LOG     ✓ Compiled in 212ms
+[01:48:24.013] Server  LOG     ✓ Compiled in 213ms
+[01:48:30.853] Server  LOG     ✓ Compiled in 461ms
+[01:48:46.966] Server  LOG     ✓ Compiled in 456ms
+[01:48:50.762] Server  LOG     ✓ Compiled in 408ms
+[01:48:58.925] Server  LOG     ✓ Compiled in 434ms
+[01:49:07.012] Server  LOG     ✓ Compiled in 288ms
+[01:49:25.780] Server  LOG     ✓ Compiled in 207ms
+[01:50:02.591] Server  LOG     ✓ Compiled in 470ms
+[01:51:40.684] Server  LOG     ✓ Compiled in 455ms
+[01:55:31.229] Server  LOG     ✓ Compiled in 310ms
+[02:02:04.335] Server  LOG     ✓ Compiled in 451ms
+[02:03:25.201] Server  LOG     ✓ Compiled in 323ms
+[02:05:26.341] Server  LOG     ✓ Compiled in 314ms
+[02:07:48.866] Server  LOG     ✓ Compiled in 301ms
+[02:08:45.445] Server  LOG     ✓ Compiled in 272ms
+[02:09:02.505] Server  LOG     ✓ Compiled in 396ms
+[02:12:24.540] Server  LOG     ✓ Compiled in 346ms
+[02:12:30.642] Server  LOG     ✓ Compiled in 357ms
+[02:12:43.784] Server  LOG     ✓ Compiled in 43ms
+[02:12:43.890] Browser ERROR   ./src/app/howitworks/page.tsx:359:49
+Parsing ecmascript source code failed
+  357 |         ========================== */}
+  358 |         <section className="py-6 bg-gray-50 >
+> 359 |           <div className="container mx-auto px-4">
+      |                                                 ^^
+  360 |             <div className="text-center mb-8">
+  361 |               <Badge className="mb-4 bg-green-100 text-green-700 hover:bg-green-200">
+  362 |                 Simple Process
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/howitworks/page.tsx [Client Component Browser]
+    ./src/app/howitworks/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/howitworks/page.tsx [Client Component SSR]
+    ./src/app/howitworks/page.tsx [Server Component]
+[02:13:37.876] Server  LOG     ✓ Compiled in 286ms
+[02:16:20.778] Server  LOG     ✓ Compiled in 1137ms
+[02:16:52.136] Server  LOG     ✓ Compiled in 214ms
+[02:17:06.861] Server  LOG     ✓ Compiled in 397ms
+[02:17:09.770] Server  LOG     ✓ Compiled in 203ms
+[02:17:14.548] Server  LOG     ✓ Compiled in 529ms
+[02:19:41.750] Server  LOG     ✓ Compiled in 531ms
+[02:20:17.386] Server  LOG     ✓ Compiled in 216ms
+[02:20:27.747] Server  LOG     ✓ Compiled in 417ms
+[02:20:32.618] Server  LOG     ✓ Compiled in 208ms
+[02:23:27.568] Server  LOG     ✓ Compiled in 534ms

@@ -39,14 +39,16 @@ function StepCard({
   title,
   description,
   stepNumber,
+  className = "",
 }: {
   icon: React.ElementType;
   title: string;
   description: string;
   stepNumber: number;
+  className?: string;
 }) {
   return (
-    <Card className="relative group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-gray-50">
+    <Card className={`relative group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-gray-50 ${className}`}>
       <div className="absolute -top-4 left-6 w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
         <span className="text-white font-bold text-lg">{stepNumber}</span>
       </div>
@@ -103,11 +105,13 @@ function PricingCard({
   price,
   features,
   highlight = false,
+  buttonClassName,
 }: {
   name: string;
   price: string;
   features: string[];
   highlight?: boolean;
+  buttonClassName?: string;
 }) {
   return (
     <Card
@@ -149,6 +153,7 @@ function PricingCard({
       <CardFooter>
         <Button
           className={`w-full ${
+            buttonClassName ? buttonClassName :
             highlight
               ? "bg-green-600 hover:bg-green-700"
               : "bg-gray-900 hover:bg-gray-800"
@@ -177,8 +182,8 @@ function FeatureCard({
       <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
         <Icon className="w-8 h-8 text-green-600" />
       </div>
-      <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
+      <p className="text-white">{description}</p>
     </div>
   );
 }
@@ -220,12 +225,12 @@ function StatCard({
   label: string;
 }) {
   return (
-    <div className="text-center p-6">
-      <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
-        <Icon className="w-7 h-7 text-white" />
+    <div className="text-center p-3">
+      <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+        <Icon className="w-5 h-5 text-white" />
       </div>
-      <div className="text-4xl font-bold text-white mb-1">{value}</div>
-      <div className="text-green-100">{label}</div>
+      <div className="text-2xl font-bold text-white mb-0.5">{value}</div>
+      <div className="text-green-100 text-sm">{label}</div>
     </div>
   );
 }
@@ -233,7 +238,7 @@ function StatCard({
 // Animated Wave Component
 function AnimatedWave() {
   const [pathD, setPathD] = useState(
-    "M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+    "M0 120 L60 100 C180 70, 300 40, 420 45 C540 50, 660 80, 780 75 C900 70, 1020 50, 1140 60 C1260 70, 1380 90, 1440 100 L1440 120 H0 Z"
   );
 
   useEffect(() => {
@@ -248,20 +253,20 @@ function AnimatedWave() {
         return baseY + Math.sin(time + x * 0.005) * amplitude;
       };
 
-      const p1 = { x: 60, y: 105 };
-      const c1_1 = { x: 120, y: 90 };
-      const c1_2 = { x: 240, y: 60 };
-      const p2 = { x: 360, y: 45 };
-      const c2_1 = { x: 480, y: 30 };
-      const c2_2 = { x: 600, y: 30 };
-      const p3 = { x: 720, y: 37.5 };
-      const c3_1 = { x: 840, y: 45 };
-      const c3_2 = { x: 960, y: 60 };
-      const p4 = { x: 1080, y: 67.5 };
-      const c4_1 = { x: 1200, y: 75 };
-      const c4_2 = { x: 1320, y: 75 };
-      const p5 = { x: 1380, y: 75 };
-      const p6 = { x: 1440, y: 75 };
+      const p1 = { x: 60, y: 100 };
+      const c1_1 = { x: 180, y: 70 };
+      const c1_2 = { x: 300, y: 40 };
+      const p2 = { x: 420, y: 45 };
+      const c2_1 = { x: 540, y: 50 };
+      const c2_2 = { x: 660, y: 80 };
+      const p3 = { x: 780, y: 75 };
+      const c3_1 = { x: 900, y: 70 };
+      const c3_2 = { x: 1020, y: 50 };
+      const p4 = { x: 1140, y: 60 };
+      const c4_1 = { x: 1260, y: 70 };
+      const c4_2 = { x: 1380, y: 90 };
+      const p5 = { x: 1440, y: 100 };
+      const p6 = { x: 1440, y: 120 };
 
       const d = [
         `M0 120`,
@@ -270,7 +275,7 @@ function AnimatedWave() {
         `C${c2_1.x} ${getY(c2_1.y, c2_1.x)} ${c2_2.x} ${getY(c2_2.y, c2_2.x)} ${p3.x} ${getY(p3.y, p3.x)}`,
         `C${c3_1.x} ${getY(c3_1.y, c3_1.x)} ${c3_2.x} ${getY(c3_2.y, c3_2.x)} ${p4.x} ${getY(p4.y, p4.x)}`,
         `C${c4_1.x} ${getY(c4_1.y, c4_1.x)} ${c4_2.x} ${getY(c4_2.y, c4_2.x)} ${p5.x} ${getY(p5.y, p5.x)}`,
-        `L${p6.x} ${getY(p6.y, p6.x)}`,
+        `L${p6.x} ${p6.y}`,
         `V120 H0 Z`
       ].join(" ");
 
@@ -339,12 +344,12 @@ export default function HowItWorksPage() {
         {/* =========================
             STATS SECTION
         ========================== */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section className="py-2 bg-black">
+          <div className="container mx-auto px-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <StatCard icon={Clock} value="24/7" label="Available" />
               <StatCard icon={Users} value="500+" label="Experts" />
-              <StatCard icon={Award} value="98%" label="Satisfaction" />
+              <StatCard icon={Award} value="99%" label="Satisfaction" />
               <StatCard icon={Wrench} value="10k+" label="Resolved" />
             </div>
           </div>
@@ -353,9 +358,9 @@ export default function HowItWorksPage() {
         {/* =========================
             PROCESS STEPS
         ========================== */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-6 bg-gray-50" >
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <Badge className="mb-4 bg-green-100 text-green-700 hover:bg-green-200">
                 Simple Process
               </Badge>
@@ -368,7 +373,7 @@ export default function HowItWorksPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 relative">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 relative">
               {/* Connecting Line (Desktop) */}
               <div className="hidden md:block absolute top-32 left-[16.66%] right-[16.66%] h-0.5 bg-gradient-to-r from-green-200 via-green-400 to-green-200 z-0"></div>
 
@@ -389,6 +394,7 @@ export default function HowItWorksPage() {
                 title="Resolve & Optimize"
                 description="Problems are fixed, systems optimized, and you get clear recommendations for long-term performance."
                 stepNumber={3}
+                className="col-span-2 md:col-span-1 w-[calc(50%-0.5rem)] md:w-auto mx-auto md:mx-0"
               />
             </div>
           </div>
@@ -397,7 +403,7 @@ export default function HowItWorksPage() {
         {/* =========================
             SERVICES SECTION
         ========================== */}
-        <section className="py-20 bg-white">
+        <section className="py-10 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <Badge className="mb-4 bg-yellow-100 text-yellow-700 hover:bg-yellow-200">
@@ -412,7 +418,7 @@ export default function HowItWorksPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               <ServiceCard
                 title="Emergency Support"
                 items={[
@@ -581,6 +587,7 @@ export default function HowItWorksPage() {
                   "API access",
                   "White-label options",
                 ]}
+                buttonClassName="bg-yellow-600 hover:bg-yellow-700 text-white"
               />
             </div>
           </div>
