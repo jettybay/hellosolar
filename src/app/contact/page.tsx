@@ -10,6 +10,7 @@ import {
   Twitter,
   Linkedin,
 } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 import Footer from "@/components/Footer";
 import FloatingChat from "@/components/FloatingChat";
 import Navbar from "@/components/Navbar";
@@ -97,6 +98,10 @@ export default function ContactPage() {
                 <SocialIcon
                   icon={<Linkedin />}
                   link="https://linkedin.com/company/hello-solar"
+                />
+                <SocialIcon
+                  icon={<FaTiktok />}
+                  link="https://www.tiktok.com/@solarslotzng"
                 />
               </div>
             </div>

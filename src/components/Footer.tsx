@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -120,6 +121,14 @@ export default function Footer() {
                   className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
                 >
                   <Linkedin className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@solarslotzng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon tiktok w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
+                >
+                  <FaTiktok className="w-4 h-4" />
                 </a>
               </div>
             </div>

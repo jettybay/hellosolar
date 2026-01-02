@@ -153,3 +153,8 @@
 .bg-danger {
   background-color: var(--solar-red);
 }
+
+/* TikTok icon hover style */
+.social-icon.tiktok:hover {
+  color: #000000; /* TikTok brand color or your theme color */
+}
