@@ -1,35 +1,24 @@
-# Chat Implementation Fixes - TODO
+# TODO - Fix Git Push Secret Issue
 
-## Step 1: Create Document Reader Utility
-- [x] Create `src/lib/documents.ts` to read all solar_docs recursively
-- [x] Implement text extraction from markdown files
-- [x] Provide search/retrieval functionality
+## Issue
+GitHub blocked the push because an OpenAI API key was detected in `.env.local`
 
-## Step 2: Fix API Route with RAG
-- [x] Update `/api/ask/route.ts`
-- [x] Import document reader utility
-- [x] Implement simple text-based retrieval (find relevant docs)
-- [x] Pass relevant context to OpenAI system prompt
-- [x] Return context-aware answers
+## Plan
+1. [x] Create .gitignore file with .env.local
+2. [x] Remove .env.local from git tracking
+3. [x] Amend the latest commit to exclude the secret
+4. [x] Force push to update the remote
 
-## Step 3: Fix Chat Page UI
-- [x] Update `/app/chat/page.tsx`
-- [x] Build complete chat interface (currently blank)
-- [x] Add message list, input field, send button
-- [x] Include typing indicators and timestamps
-- [x] Match styling with FloatingChat
+## Steps Executed
+1. [x] Installed git-filter-repo
+2. [x] Ran `git filter-repo --invert-paths --path .env.local` to remove the file from git history
+3. [x] Re-added origin remote
+4. [x] Force pushed to remote
+5. [x] Committed and pushed .gitignore file
 
-## Step 4: Connect FloatingChat to API
-- [x] Update `/components/FloatingChat.tsx`
-- [x] Replace mock random responses with actual API calls
-- [x] Keep floating widget UI and animations
-- [x] Add proper error handling
-
-## Step 5: Test and Verify
-- [x] Test chat/page.tsx shows proper UI
-- [x] Test responses use solar_docs context
-- [x] Test FloatingChat works with real API
-- [x] Verify no console errors
-
-All tasks completed successfully! ✅
+## Important Security Notice
+The exposed OpenAI API key has been removed from git history. However, since it was publicly exposed in a commit, you should:
+- **Rotate the OpenAI API key** (the one starting with `sk-proj-YeBGywSHDNziMt5uFyHaL1mlIKDX4_-vsiRSz614_TlqmKG-7Q7GfPnz6M4qktjjgnLznkcxLhT3BlbkF`)
+- Generate a new API key from https://platform.openai.com/api-keys
+- Update the `.env.local` file with the new key
 
