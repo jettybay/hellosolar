@@ -1,4 +1,6 @@
 {
+  "/chat/page": "app/chat/page.js",
   "/contact/page": "app/contact/page.js",
+  "/howitworks/page": "app/howitworks/page.js",
   "/page": "app/page.js"
 }

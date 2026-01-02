@@ -11,126 +11,58 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-gray-400">
       <div className="container mx-auto px-4 py-6 flex flex-col items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center text-center">
+        <div className="flex flex-col items-center space-y-6 text-center">
           {/* Company Info */}
           <div className="space-y-4">
-          
-            {/* <p className="text-sm leading-relaxed">
-              Your trusted partner for 24/7 solar energy support, expert guidance, 
-              and professional installation services.
-            </p> */}
-            <p className="text-sm font-medium text-yellow-400 text-center-md">
+            <p className="text-sm font-medium text-yellow-400">
               A Subsidiary of Solar Slot Limited
             </p>
           </div>
 
-          {/* Quick Links
+          {/* Social Media */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-sm hover:text-green-400 transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/howitworks" className="text-sm hover:text-green-400 transition-colors">
-                  How It Works
-                </Link>
-              </li>
-              <li>
-                <Link href="/chat" className="text-sm hover:text-green-400 transition-colors">
-                  Chat with AI
-                </Link>
-              </li>
-              <li>
-                <Link href="tel:09020935919" className="text-sm hover:text-green-400 transition-colors">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div> */}
-
-          {/* Services
-          <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li className="text-sm">Emergency Support</li>
-              <li className="text-sm">Enquiries & Consultation</li>
-              <li className="text-sm">Installation Coordination</li>
-              <li className="text-sm">Solar Office Locator</li>
-            </ul>
-          </div> */}
-
-          {/* Contact Info */}
-          <div>
-            {/* <h3 className="text-white font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">
-                  A10 Suite, Staklin Plaza, 7 Akowonjo Road, Egba, Lagos.
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <a href="tel:09020935919" className="text-sm hover:text-green-400 transition-colors">
-                  09020935919
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <a href="mailto:support@hello-solar.com" className="text-sm hover:text-green-400 transition-colors">
-                  support@hello-solar.com
-                </a>
-              </li>
-            </ul> */}
-
-            {/* Social Media */}
-            <div className="mt-1">
-              <h4 className="text-white font-medium mb-3 text-center">Follow Us</h4>
-              <div className="flex justify-center gap-3">
-                <a
-                  href="https://facebook.com/hellosolar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
-                >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://instagram.com/hellosolar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://twitter.com/hellosolar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://linkedin.com/company/hello-solar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://www.tiktok.com/@solarslotzng"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon tiktok w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
-                >
-                  <FaTiktok className="w-4 h-4" />
-                </a>
-              </div>
+            <h4 className="text-white font-medium mb-3">Follow Us</h4>
+            <div className="flex justify-center gap-3">
+              <a
+                href="https://facebook.com/hellosolar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="https://instagram.com/hellosolar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://twitter.com/hellosolar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
+              >
+                <Twitter className="w-4 h-4" />
+              </a>
+              <a
+                href="https://linkedin.com/company/hello-solar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@solarslotzng"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon tiktok w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
+              >
+                <FaTiktok className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>

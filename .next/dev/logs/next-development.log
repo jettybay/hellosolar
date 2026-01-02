@@ -1,7 +1,7 @@
-[00:00:02.198] Server  LOG     ✓ Ready in 1492ms
-[00:00:02.200] Server  WARN    ⚠ Cross origin request detected from 172.20.10.3 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:02.101] Server  LOG     ✓ Ready in 1505ms
+[00:00:08.080] Server  LOG     ○ Compiling /contact ...
+[00:00:09.141] Server  WARN    ⚠ Cross origin request detected from 172.20.10.3 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:13.017] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:28.851] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:30.267] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:00:30.267] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:00:09.203] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:41.363] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:00:41.363] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
