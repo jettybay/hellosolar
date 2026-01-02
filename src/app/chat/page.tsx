@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-
-import { COLORS } from "@/lib/colors";
+import React, { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+import { ArrowLeft, Send, Bot, User, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { COLORS } from '@/lib/colors';
+import Navbar from '@/components/Navbar';
 
 interface Message {
   id: string;
@@ -14,245 +16,273 @@ interface Message {
   timestamp: number;
 }
 
-export default function MessagesPage() {
-  const [messages, setMessages] = useState<Message[]>([]);
+const ChatPage = () => {
   const [text, setText] = useState("");
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: "welcome",
+      text: "Hello! Welcome to Hello Solar! How can I help you with your solar energy needs today?",
+      isFromUser: false,
+      timestamp: Date.now(),
+    }
+  ]);
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Auto-scroll to bottom when new messages are added
   useEffect(() => {
-    // Initial bot greeting messages
-    const initialMessages = [
-      {
-        id: "1",
-        text: "Hello! Welcome to our Hello Solar! I'm here to assist you with your solar energy needs. What would you like to know?",
-        isFromUser: false,
-        timestamp: Date.now() - 300000,
-      }
-    
-    ];
-    setMessages(initialMessages);
-  }, []);
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const sendMessage = () => {
-    if (text.trim().length === 0) return;
-
-    const newMessage = {
-      id: Date.now().toString(),
-      text: text.trim(),
-      isFromUser: true,
-      timestamp: Date.now(),
-    };
-
-    setMessages(prev => [...prev, newMessage]);
-    setText("");
-
-    // Simulate bot typing
-    setIsTyping(true);
-
-    // Simulate bot response after 1-3 seconds
-    setTimeout(() => {
-      setIsTyping(false);
-      
-      const responses = [
-        "I'd be happy to help you with that! Let me check our available solar solutions and services.",
-        "I can help you get started on going solar. What type of property are you looking to install solar on?",
-        "That's great!",
-        "Let me find that information for you.",
-        "Sure! Here are some tips and benefits of switching to solar energy.",
-        "I can assist you with solar installation. What specific questions do you have?",
-        "Our platform offers various solar resources. Would you like me to guide you through them?",
-        "Absolutely! I can help you analyze potential solar savings. What are your current energy costs?",
-        "Let me connect you with one of our solar experts for personalized advice.",
-        "I can provide you with solar information for your area. Which location are you interested in?",
-        "That's interesting! Can you tell me more about your energy needs?",
-        "I can help you with solar financing. What's your budget range for going solar?",
-        "Let me check the latest solar incentives available in your area.",
-        "I can assist you in creating a solar plan. What are your main goals for switching to solar?",
-        
-      ];
-      
-      const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-      
-      const botMessage = {
-        id: (Date.now() + 1).toString(),
-        text: randomResponse,
-        isFromUser: false,
-        timestamp: Date.now(),
-      };
-
-      setMessages(prev => [...prev, botMessage]);
-    }, Math.random() * 2000 + 1000); // Random delay between 1-3 seconds
-  };
-
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, isTyping]);
 
   const formatTime = (timestamp: number): string => {
     const date = new Date(timestamp);
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
-  const renderMessage = (message: Message) => (
-    <div
-      key={message.id}
-      className={`flex mb-4 ${message.isFromUser ? 'justify-end' : 'justify-start'}`}
-    >
-      <div className={`flex max-w-xs lg:max-w-md ${message.isFromUser ? 'flex-row-reverse' : 'flex-row'}`}>
+  const sendMessage = async () => {
+    if (text.trim().length === 0) return;
+    
+    const userMessageText = text.trim();
 
-        {/* Avatar */}
-        <div className="flex-shrink-0 mx-2">
-          {message.isFromUser ? (
-            <div
-              className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold"
-              style={{ backgroundColor: COLORS.primary, color: COLORS.textOnPrimary }}
-            >
-              U
-            </div>
-          ) : (
-            <div
-              className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden"
-              style={{ backgroundColor: COLORS.surfaceVariant }}
-            >
-              <span className="text-sm">☀️</span>
-            </div>
-          )}
-        </div>
+    const newMessage: Message = {
+      id: Date.now().toString(),
+      text: userMessageText,
+      isFromUser: true,
+      timestamp: Date.now(),
+    };
 
-        {/* Message Bubble */}
-        <div
-          className={`px-4 py-2 rounded-2xl ${
-            message.isFromUser
-              ? 'rounded-br-sm'
-              : 'rounded-bl-sm'
-          }`}
-          style={{
-            backgroundColor: message.isFromUser ? COLORS.primary : COLORS.surface,
-            color: message.isFromUser ? COLORS.textOnPrimary : COLORS.textPrimary,
-          }}
-        >
-          <p className="text-sm">{message.text}</p>
-          <p
-            className="text-xs mt-1 opacity-70"
-            style={{ color: message.isFromUser ? COLORS.textOnPrimary : COLORS.gray }}
-          >
-            {formatTime(message.timestamp)}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+    setMessages(prev => [...prev, newMessage]);
+    setText("");
+    setIsTyping(true);
 
-  const renderTypingIndicator = () => (
-    <div className="flex justify-start mb-4">
-      <div className="flex max-w-xs lg:max-w-md">
+    try {
+      const res = await fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: userMessageText })
+      });
 
-        <div className="flex-shrink-0 mx-2">
-          <div
-            className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden"
-            style={{ backgroundColor: COLORS.surfaceVariant }}
-          >
-            <span className="text-sm">☀️</span>
-          </div>
-        </div>
-        <div
-          className="px-4 py-2 rounded-2xl rounded-bl-sm"
-          style={{ backgroundColor: COLORS.surface }}
-        >
-          <div className="flex space-x-1">
-            <div
-              className="w-2 h-2 rounded-full animate-bounce"
-              style={{ backgroundColor: COLORS.gray }}
-            ></div>
-            <div
-              className="w-2 h-2 rounded-full animate-bounce"
-              style={{ backgroundColor: COLORS.gray, animationDelay: "0.1s" }}
-            ></div>
-            <div
-              className="w-2 h-2 rounded-full animate-bounce"
-              style={{ backgroundColor: COLORS.gray, animationDelay: "0.2s" }}
-            ></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+      if (!res.ok) {
+        throw new Error(`Request failed with status ${res.status}`);
+      }
+
+      const data = await res.json();
+
+      const botMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: data.answer ?? "Sorry, I couldn't find an answer.",
+        isFromUser: false,
+        timestamp: Date.now(),
+      };
+
+      setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setMessages(prev => [
+        ...prev,
+        {
+          id: (Date.now() + 2).toString(),
+          text: "Something went wrong. Please try again.",
+          isFromUser: false,
+          timestamp: Date.now(),
+        }
+      ]);
+    } finally {
+      setIsTyping(false);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: COLORS.background }}>
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      
       {/* Header */}
-      <header className="shadow-sm p-4" style={{ backgroundColor: COLORS.surface }}>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="mr-4">
-              <ArrowLeft className="w-6 h-6" style={{ color: COLORS.textPrimary }} />
+      <div 
+        className="text-white py-4"
+        style={{ backgroundColor: COLORS.primary }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-4">
+            <Link href="/">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-white hover:bg-white/20"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back
+              </Button>
             </Link>
-            <div>
-              <h1 className="text-lg font-bold" style={{ color: COLORS.textPrimary }}>
-                Hello Solar Assistant
-              </h1>
-              <p className="text-sm" style={{ color: COLORS.success }}>
-                Online
-              </p>
-            </div>
+            <h1 className="text-xl font-bold flex items-center gap-2">
+              <Bot className="w-6 h-6" />
+              Hello Solar Assistant
+            </h1>
           </div>
-          {/* <button className="p-2">
-            <span className="text-xl">⋯</span>
-          </button> */}
         </div>
-      </header>
-
-      {/* Messages List */}
-      <div className="flex-1 overflow-y-auto p-4">
-        {messages.map(renderMessage)}
-        {isTyping && renderTypingIndicator()}
-        <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Area */}
-      <div className="p-4 border-t" style={{ backgroundColor: COLORS.surface, borderColor: COLORS.grayMedium }}>
-        <div className="flex items-end space-x-2">
-          <div className="flex-1">
-            <textarea
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Type a message..."
-              className="w-full px-4 py-2 rounded-full resize-none focus:outline-none"
-              style={{
-                backgroundColor: COLORS.surfaceVariant,
-                color: COLORS.textPrimary,
-                border: "none",
-                minHeight: "40px",
-                maxHeight: "120px",
-              }}
-              rows={1}
-              onKeyPress={(e) => {
-                if (e.key === "Enter" && !e.shiftKey) {
-                  e.preventDefault();
-                  sendMessage();
-                }
-              }}
-            />
-          </div>
-          <button
-            onClick={sendMessage}
-            disabled={text.trim().length === 0}
-            className="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
-            style={{
-              backgroundColor: text.trim().length > 0 ? COLORS.primary : COLORS.grayMedium,
-              color: text.trim().length > 0 ? COLORS.textOnPrimary : COLORS.gray,
-            }}
-          >
-            <span className="text-lg">➤</span>
-          </button>
-        </div>
+      {/* Chat Container */}
+      <div className="container mx-auto px-4 py-6 max-w-4xl">
+        <Card className="h-[calc(100vh-220px)] min-h-[500px] shadow-lg">
+          <CardHeader className="border-b pb-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Bot className="w-5 h-5" style={{ color: COLORS.primary }} />
+                <span className="font-semibold">Solar Assistant</span>
+              </div>
+              <span 
+                className="text-xs px-2 py-1 rounded-full"
+                style={{ 
+                  backgroundColor: COLORS.success, 
+                  color: COLORS.textOnPrimary 
+                }}
+              >
+                Online
+              </span>
+            </div>
+          </CardHeader>
+          
+          <CardContent className="p-0 h-[calc(100%-65px)] flex flex-col">
+            {/* Messages Area */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              {messages.map((message) => (
+                <div
+                  key={message.id}
+                  className={`flex ${message.isFromUser ? 'justify-end' : 'justify-start'}`}
+                >
+                  <div className={`flex max-w-[80%] ${message.isFromUser ? 'flex-row-reverse' : 'flex-row'}`}>
+                    {/* Avatar */}
+                    <div className="flex-shrink-0 mx-2">
+                      {message.isFromUser ? (
+                        <div
+                          className="w-8 h-8 rounded-full flex items-center justify-center"
+                          style={{ 
+                            backgroundColor: COLORS.primary, 
+                            color: COLORS.textOnPrimary 
+                          }}
+                        >
+                          <User className="w-4 h-4" />
+                        </div>
+                      ) : (
+                        <div
+                          className="w-8 h-8 rounded-full flex items-center justify-center"
+                          style={{ backgroundColor: COLORS.surfaceVariant }}
+                        >
+                          <Bot className="w-4 h-4" style={{ color: COLORS.primary }} />
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Message Bubble */}
+                    <div
+                      className={`px-4 py-2 rounded-2xl text-sm max-w-full ${
+                        message.isFromUser ? 'rounded-br-sm' : 'rounded-bl-sm'
+                      }`}
+                      style={{
+                        backgroundColor: message.isFromUser ? COLORS.primary : COLORS.surface,
+                        color: message.isFromUser ? COLORS.textOnPrimary : COLORS.textPrimary,
+                        border: message.isFromUser ? 'none' : `1px solid ${COLORS.border}`,
+                      }}
+                    >
+                      <p className="whitespace-pre-wrap">{message.text}</p>
+                      <p
+                        className="text-xs mt-1 opacity-70"
+                        style={{ 
+                          color: message.isFromUser ? COLORS.textOnPrimary : COLORS.gray 
+                        }}
+                      >
+                        {formatTime(message.timestamp)}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              
+              {/* Typing Indicator */}
+              {isTyping && (
+                <div className="flex justify-start">
+                  <div className="flex max-w-[80%]">
+                    <div className="flex-shrink-0 mx-2">
+                      <div
+                        className="w-8 h-8 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: COLORS.surfaceVariant }}
+                      >
+                        <Bot className="w-4 h-4" style={{ color: COLORS.primary }} />
+                      </div>
+                    </div>
+                    <div
+                      className="px-4 py-3 rounded-2xl rounded-bl-sm"
+                      style={{ 
+                        backgroundColor: COLORS.surface,
+                        border: `1px solid ${COLORS.border}`
+                      }}
+                    >
+                      <div className="flex space-x-1">
+                        <div
+                          className="w-2 h-2 rounded-full animate-bounce"
+                          style={{ backgroundColor: COLORS.gray }}
+                        ></div>
+                        <div
+                          className="w-2 h-2 rounded-full animate-bounce"
+                          style={{ backgroundColor: COLORS.gray, animationDelay: "0.1s" }}
+                        ></div>
+                        <div
+                          className="w-2 h-2 rounded-full animate-bounce"
+                          style={{ backgroundColor: COLORS.gray, animationDelay: "0.2s" }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Input Area */}
+            <div className="p-4 border-t" style={{ borderColor: COLORS.border }}>
+              <div className="flex items-center gap-2">
+                <Input
+                  type="text"
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                  placeholder="Type your message..."
+                  className="flex-1"
+                  onKeyPress={handleKeyPress}
+                  disabled={isTyping}
+                />
+                <Button
+                  onClick={sendMessage}
+                  disabled={text.trim().length === 0 || isTyping}
+                  size="lg"
+                  style={{
+                    backgroundColor: COLORS.primary,
+                    color: COLORS.textOnPrimary,
+                  }}
+                >
+                  {isTyping ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <Send className="w-4 h-4" />
+                  )}
+                </Button>
+              </div>
+              <p className="text-xs text-gray-500 mt-2 text-center">
+                Press Enter to send, Shift+Enter for new line
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
-}
+};
+
+export default ChatPage;
+

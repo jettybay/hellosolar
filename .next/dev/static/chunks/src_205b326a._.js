@@ -649,7 +649,6 @@ __turbopack_context__.s([
     ()=>FloatingChat
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/card.tsx [app-client] (ecmascript)");
@@ -659,6 +658,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/send.js [app-client] (ecmascript) <export default as Send>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/bot.js [app-client] (ecmascript) <export default as Bot>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/user.js [app-client] (ecmascript) <export default as User>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.js [app-client] (ecmascript) <export default as Loader2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/colors.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -669,215 +669,200 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-;
 function FloatingChat() {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(24);
-    if ($[0] !== "31e6824a5f7fbc3d77627899d0c4e4520f836fb92fba86f00e508da17c42758a") {
-        for(let $i = 0; $i < 24; $i += 1){
-            $[$i] = Symbol.for("react.memo_cache_sentinel");
-        }
-        $[0] = "31e6824a5f7fbc3d77627899d0c4e4520f836fb92fba86f00e508da17c42758a";
-    }
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    let t0;
-    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
-        t0 = [
-            {
-                id: "1",
-                text: "Hello! Welcome to Hello Solar! How can I help you with your solar energy needs today?",
-                isFromUser: false,
-                timestamp: Date.now() - 300000
-            }
-        ];
-        $[1] = t0;
-    } else {
-        t0 = $[1];
-    }
-    const [messages, setMessages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(t0);
+    const [messages, setMessages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([
+        {
+            id: "welcome",
+            text: "Hello! Welcome to Hello Solar! How can I help you with your solar energy needs today?",
+            isFromUser: false,
+            timestamp: Date.now()
+        }
+    ]);
     const [text, setText] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [isTyping, setIsTyping] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    let t1;
-    if ($[2] !== text) {
-        t1 = ({
-            "FloatingChat[sendMessage]": ()=>{
-                if (text.trim().length === 0) {
-                    return;
-                }
-                const newMessage = {
-                    id: Date.now().toString(),
-                    text: text.trim(),
-                    isFromUser: true,
-                    timestamp: Date.now()
-                };
-                setMessages({
-                    "FloatingChat[sendMessage > setMessages()]": (prev)=>[
-                            ...prev,
-                            newMessage
-                        ]
-                }["FloatingChat[sendMessage > setMessages()]"]);
-                setText("");
-                setIsTyping(true);
-                setTimeout({
-                    "FloatingChat[sendMessage > setTimeout()]": ()=>{
-                        setIsTyping(false);
-                        const responses = [
-                            "I'd be happy to help you with that! Let me check our solar solutions and services.",
-                            "I can help you get started with solar energy. What's your energy consumption like?",
-                            "That's great! Let me connect you with our solar experts.",
-                            "Let me find that information for you.",
-                            "Sure! Here are some benefits of switching to solar energy.",
-                            "I can assist you with solar installation. What type of property are you looking to install solar on?",
-                            "Our platform offers various solar solutions. Would you like me to guide you through them?",
-                            "Absolutely! I can help you calculate potential savings with solar.",
-                            "Let me connect you with one of our solar consultants for personalized advice.",
-                            "I can provide you with solar information and pricing. What's your location?",
-                            "That's interesting! Can you tell me more about your energy needs?",
-                            "I can help you with solar financing options. What's your budget range?",
-                            "Let me check the latest solar incentives for your area.",
-                            "I can assist you in creating a solar plan. What are your main goals for going solar?"
-                        ];
-                        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                        const botMessage = {
-                            id: (Date.now() + 1).toString(),
-                            text: randomResponse,
-                            isFromUser: false,
-                            timestamp: Date.now()
-                        };
-                        setMessages({
-                            "FloatingChat[sendMessage > setTimeout() > setMessages()]": (prev_0)=>[
-                                    ...prev_0,
-                                    botMessage
-                                ]
-                        }["FloatingChat[sendMessage > setTimeout() > setMessages()]"]);
+    const messagesEndRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // Auto-scroll to bottom when new messages are added
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "FloatingChat.useEffect": ()=>{
+            if (isOpen && messagesEndRef.current) {
+                messagesEndRef.current.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }["FloatingChat.useEffect"], [
+        messages,
+        isTyping,
+        isOpen
+    ]);
+    const formatTime = (timestamp)=>{
+        const date = new Date(timestamp);
+        return date.toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    };
+    const sendMessage = async ()=>{
+        if (text.trim().length === 0) return;
+        const userMessageText = text.trim();
+        const newMessage = {
+            id: Date.now().toString(),
+            text: userMessageText,
+            isFromUser: true,
+            timestamp: Date.now()
+        };
+        setMessages((prev)=>[
+                ...prev,
+                newMessage
+            ]);
+        setText("");
+        setIsTyping(true);
+        try {
+            const res = await fetch('/api/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    question: userMessageText
+                })
+            });
+            if (!res.ok) {
+                throw new Error(`Request failed with status ${res.status}`);
+            }
+            const data = await res.json();
+            const botMessage = {
+                id: (Date.now() + 1).toString(),
+                text: data.answer ?? "Sorry, I couldn't find an answer.",
+                isFromUser: false,
+                timestamp: Date.now()
+            };
+            setMessages((prev_1)=>[
+                    ...prev_1,
+                    botMessage
+                ]);
+        } catch (error) {
+            console.error("Error sending message:", error);
+            setMessages((prev_0)=>[
+                    ...prev_0,
+                    {
+                        id: (Date.now() + 2).toString(),
+                        text: "Something went wrong. Please try again.",
+                        isFromUser: false,
+                        timestamp: Date.now()
                     }
-                }["FloatingChat[sendMessage > setTimeout()]"], Math.random() * 2000 + 1000);
-            }
-        })["FloatingChat[sendMessage]"];
-        $[2] = text;
-        $[3] = t1;
-    } else {
-        t1 = $[3];
-    }
-    const sendMessage = t1;
-    const formatTime = _FloatingChatFormatTime;
-    let t2;
-    if ($[4] !== sendMessage) {
-        t2 = ({
-            "FloatingChat[handleKeyPress]": (e)=>{
-                if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    sendMessage();
-                }
-            }
-        })["FloatingChat[handleKeyPress]"];
-        $[4] = sendMessage;
-        $[5] = t2;
-    } else {
-        t2 = $[5];
-    }
-    const handleKeyPress = t2;
-    let t3;
-    if ($[6] !== handleKeyPress || $[7] !== isOpen || $[8] !== isTyping || $[9] !== messages || $[10] !== sendMessage || $[11] !== text) {
-        t3 = isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-            className: "mb-4 w-80 h-96 shadow-2xl border-0",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
-                    className: "pb-3",
-                    style: {
-                        backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary,
-                        color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary
-                    },
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center justify-between",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center space-x-2",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__["Bot"], {
-                                        className: "w-5 h-5"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/FloatingChat.tsx",
-                                        lineNumber: 104,
-                                        columnNumber: 106
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                        className: "text-sm font-semibold",
-                                        children: "Hello Solar Assistant"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/FloatingChat.tsx",
-                                        lineNumber: 104,
-                                        columnNumber: 133
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/FloatingChat.tsx",
-                                lineNumber: 104,
-                                columnNumber: 61
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center space-x-2",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
-                                        variant: "secondary",
-                                        className: "text-xs",
-                                        style: {
-                                            backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].success,
-                                            color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary
-                                        },
-                                        children: "Online"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/FloatingChat.tsx",
-                                        lineNumber: 104,
-                                        columnNumber: 262
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                        variant: "ghost",
-                                        size: "sm",
-                                        onClick: {
-                                            "FloatingChat[<Button>.onClick]": ()=>setIsOpen(false)
-                                        }["FloatingChat[<Button>.onClick]"],
-                                        className: "h-6 w-6 p-0 hover:bg-white/20",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                            className: "w-4 h-4"
+                ]);
+        } finally{
+            setIsTyping(false);
+        }
+    };
+    const handleKeyPress = (e)=>{
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed bottom-6 right-6 z-50",
+        children: [
+            isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
+                className: "mb-4 w-80 h-96 shadow-2xl border-0 absolute bottom-16 right-0",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
+                        className: "pb-3",
+                        style: {
+                            backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary,
+                            color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center justify-between",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center space-x-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__["Bot"], {
+                                            className: "w-5 h-5"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FloatingChat.tsx",
-                                            lineNumber: 109,
-                                            columnNumber: 92
+                                            lineNumber: 102,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
+                                            className: "text-sm font-semibold",
+                                            children: "Hello Solar Assistant"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/FloatingChat.tsx",
+                                            lineNumber: 103,
+                                            columnNumber: 17
                                         }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/FloatingChat.tsx",
-                                        lineNumber: 107,
-                                        columnNumber: 30
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/FloatingChat.tsx",
-                                lineNumber: 104,
-                                columnNumber: 217
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/FloatingChat.tsx",
+                                    lineNumber: 101,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center space-x-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
+                                            variant: "secondary",
+                                            className: "text-xs",
+                                            style: {
+                                                backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].success,
+                                                color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary
+                                            },
+                                            children: "Online"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/FloatingChat.tsx",
+                                            lineNumber: 108,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                            variant: "ghost",
+                                            size: "sm",
+                                            onClick: ()=>setIsOpen(false),
+                                            className: "h-6 w-6 p-0 hover:bg-white/20",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                                className: "w-4 h-4"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/FloatingChat.tsx",
+                                                lineNumber: 115,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/FloatingChat.tsx",
+                                            lineNumber: 114,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/FloatingChat.tsx",
+                                    lineNumber: 107,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/FloatingChat.tsx",
+                            lineNumber: 100,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/src/components/FloatingChat.tsx",
-                        lineNumber: 104,
-                        columnNumber: 10
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/src/components/FloatingChat.tsx",
-                    lineNumber: 101,
-                    columnNumber: 73
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
-                    className: "p-0 h-80 flex flex-col",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex-1 overflow-y-auto p-3 space-y-3",
-                            children: [
-                                messages.map({
-                                    "FloatingChat[messages.map()]": (message)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: `flex ${message.isFromUser ? "justify-end" : "justify-start"}`,
+                        lineNumber: 96,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
+                        className: "p-0 h-80 flex flex-col",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex-1 overflow-y-auto p-3 space-y-3",
+                                children: [
+                                    messages.map((message)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: `flex ${message.isFromUser ? 'justify-end' : 'justify-start'}`,
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: `flex max-w-xs ${message.isFromUser ? "flex-row-reverse" : "flex-row"}`,
+                                                className: `flex max-w-xs ${message.isFromUser ? 'flex-row-reverse' : 'flex-row'}`,
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "flex-shrink-0 mx-1",
@@ -891,49 +876,53 @@ function FloatingChat() {
                                                                 className: "w-3 h-3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FloatingChat.tsx",
-                                                                lineNumber: 113,
-                                                                columnNumber: 22
+                                                                lineNumber: 131,
+                                                                columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FloatingChat.tsx",
-                                                            lineNumber: 110,
-                                                            columnNumber: 300
+                                                            lineNumber: 127,
+                                                            columnNumber: 45
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "w-6 h-6 rounded-full flex items-center justify-center",
                                                             style: {
                                                                 backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].surfaceVariant
                                                             },
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__["Bot"], {
-                                                                className: "w-3 h-3"
+                                                                className: "w-3 h-3",
+                                                                style: {
+                                                                    color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary
+                                                                }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FloatingChat.tsx",
-                                                                lineNumber: 115,
-                                                                columnNumber: 22
+                                                                lineNumber: 135,
+                                                                columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FloatingChat.tsx",
-                                                            lineNumber: 113,
-                                                            columnNumber: 59
+                                                            lineNumber: 132,
+                                                            columnNumber: 34
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FloatingChat.tsx",
-                                                        lineNumber: 110,
-                                                        columnNumber: 242
+                                                        lineNumber: 126,
+                                                        columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: `px-3 py-2 rounded-2xl text-xs max-w-xs ${message.isFromUser ? "rounded-br-sm" : "rounded-bl-sm"}`,
+                                                        className: `px-3 py-2 rounded-2xl text-xs max-w-xs ${message.isFromUser ? 'rounded-br-sm' : 'rounded-bl-sm'}`,
                                                         style: {
                                                             backgroundColor: message.isFromUser ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].surface,
-                                                            color: message.isFromUser ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textPrimary
+                                                            color: message.isFromUser ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textPrimary,
+                                                            border: message.isFromUser ? 'none' : `1px solid ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].border}`
                                                         },
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-xs",
+                                                                className: "text-xs whitespace-pre-wrap",
                                                                 children: message.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FloatingChat.tsx",
-                                                                lineNumber: 118,
-                                                                columnNumber: 20
+                                                                lineNumber: 146,
+                                                                columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 className: "text-xs mt-1 opacity-70",
@@ -943,301 +932,245 @@ function FloatingChat() {
                                                                 children: formatTime(message.timestamp)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FloatingChat.tsx",
-                                                                lineNumber: 118,
-                                                                columnNumber: 61
+                                                                lineNumber: 147,
+                                                                columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/FloatingChat.tsx",
-                                                        lineNumber: 115,
-                                                        columnNumber: 62
+                                                        lineNumber: 141,
+                                                        columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/FloatingChat.tsx",
-                                                lineNumber: 110,
-                                                columnNumber: 153
+                                                lineNumber: 125,
+                                                columnNumber: 19
                                             }, this)
                                         }, message.id, false, {
                                             fileName: "[project]/src/components/FloatingChat.tsx",
-                                            lineNumber: 110,
-                                            columnNumber: 56
-                                        }, this)
-                                }["FloatingChat[messages.map()]"]),
-                                isTyping && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex justify-start",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex max-w-xs",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex-shrink-0 mx-1",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-6 h-6 rounded-full flex items-center justify-center",
-                                                    style: {
-                                                        backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].surfaceVariant
-                                                    },
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__["Bot"], {
-                                                        className: "w-3 h-3"
+                                            lineNumber: 124,
+                                            columnNumber: 40
+                                        }, this)),
+                                    isTyping && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex justify-start",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex max-w-xs",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex-shrink-0 mx-1",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "w-6 h-6 rounded-full flex items-center justify-center",
+                                                        style: {
+                                                            backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].surfaceVariant
+                                                        },
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bot$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Bot$3e$__["Bot"], {
+                                                            className: "w-3 h-3",
+                                                            style: {
+                                                                color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary
+                                                            }
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/FloatingChat.tsx",
+                                                            lineNumber: 163,
+                                                            columnNumber: 25
+                                                        }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FloatingChat.tsx",
-                                                        lineNumber: 123,
-                                                        columnNumber: 20
+                                                        lineNumber: 160,
+                                                        columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/FloatingChat.tsx",
-                                                    lineNumber: 121,
-                                                    columnNumber: 162
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/FloatingChat.tsx",
-                                                lineNumber: 121,
-                                                columnNumber: 126
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "px-3 py-2 rounded-2xl rounded-bl-sm",
-                                                style: {
-                                                    backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].surface
-                                                },
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex space-x-1",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "w-1.5 h-1.5 rounded-full animate-bounce",
-                                                            style: {
-                                                                backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].gray
-                                                            }
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/components/FloatingChat.tsx",
-                                                            lineNumber: 125,
-                                                            columnNumber: 50
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "w-1.5 h-1.5 rounded-full animate-bounce",
-                                                            style: {
-                                                                backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].gray,
-                                                                animationDelay: "0.1s"
-                                                            }
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/components/FloatingChat.tsx",
-                                                            lineNumber: 127,
-                                                            columnNumber: 24
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "w-1.5 h-1.5 rounded-full animate-bounce",
-                                                            style: {
-                                                                backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].gray,
-                                                                animationDelay: "0.2s"
-                                                            }
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/components/FloatingChat.tsx",
-                                                            lineNumber: 130,
-                                                            columnNumber: 24
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
+                                                    lineNumber: 159,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "px-3 py-2 rounded-2xl rounded-bl-sm",
+                                                    style: {
+                                                        backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].surface,
+                                                        border: `1px solid ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].border}`
+                                                    },
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "flex space-x-1",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "w-1.5 h-1.5 rounded-full animate-bounce",
+                                                                style: {
+                                                                    backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].gray
+                                                                }
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/FloatingChat.tsx",
+                                                                lineNumber: 173,
+                                                                columnNumber: 25
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "w-1.5 h-1.5 rounded-full animate-bounce",
+                                                                style: {
+                                                                    backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].gray,
+                                                                    animationDelay: "0.1s"
+                                                                }
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/FloatingChat.tsx",
+                                                                lineNumber: 176,
+                                                                columnNumber: 25
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "w-1.5 h-1.5 rounded-full animate-bounce",
+                                                                style: {
+                                                                    backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].gray,
+                                                                    animationDelay: "0.2s"
+                                                                }
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/FloatingChat.tsx",
+                                                                lineNumber: 180,
+                                                                columnNumber: 25
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/FloatingChat.tsx",
+                                                        lineNumber: 172,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                }, void 0, false, {
                                                     fileName: "[project]/src/components/FloatingChat.tsx",
-                                                    lineNumber: 125,
-                                                    columnNumber: 18
+                                                    lineNumber: 168,
+                                                    columnNumber: 21
                                                 }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/FloatingChat.tsx",
-                                                lineNumber: 123,
-                                                columnNumber: 59
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/FloatingChat.tsx",
+                                            lineNumber: 158,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "[project]/src/components/FloatingChat.tsx",
-                                        lineNumber: 121,
-                                        columnNumber: 95
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/FloatingChat.tsx",
-                                    lineNumber: 121,
-                                    columnNumber: 59
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/FloatingChat.tsx",
-                            lineNumber: 109,
-                            columnNumber: 199
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "p-3 border-t",
-                            style: {
-                                borderColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].grayMedium
-                            },
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-end space-x-2",
-                                children: [
+                                        lineNumber: 157,
+                                        columnNumber: 28
+                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex-1",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        ref: messagesEndRef
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/FloatingChat.tsx",
+                                        lineNumber: 188,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/FloatingChat.tsx",
+                                lineNumber: 123,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "p-3 border-t",
+                                style: {
+                                    borderColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].grayMedium
+                                },
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center space-x-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             type: "text",
                                             value: text,
-                                            onChange: {
-                                                "FloatingChat[<input>.onChange]": (e_0)=>setText(e_0.target.value)
-                                            }["FloatingChat[<input>.onChange]"],
+                                            onChange: (e_0)=>setText(e_0.target.value),
                                             placeholder: "Type a message...",
-                                            className: "w-full px-3 py-2 rounded-full text-xs focus:outline-none resize-none",
+                                            className: "flex-1 px-3 py-2 rounded-full text-xs focus:outline-none resize-none",
                                             style: {
                                                 backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].surfaceVariant,
                                                 color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textPrimary,
                                                 border: "none",
                                                 minHeight: "32px"
                                             },
-                                            onKeyPress: handleKeyPress
+                                            onKeyPress: handleKeyPress,
+                                            disabled: isTyping
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FloatingChat.tsx",
-                                            lineNumber: 135,
-                                            columnNumber: 78
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/FloatingChat.tsx",
-                                        lineNumber: 135,
-                                        columnNumber: 54
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                        onClick: sendMessage,
-                                        disabled: text.trim().length === 0,
-                                        size: "sm",
-                                        className: "w-8 h-8 rounded-full p-0",
-                                        style: {
-                                            backgroundColor: text.trim().length > 0 ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].grayMedium,
-                                            color: text.trim().length > 0 ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].gray
-                                        },
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
-                                            className: "w-3 h-3"
+                                            lineNumber: 196,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                            onClick: sendMessage,
+                                            disabled: text.trim().length === 0 || isTyping,
+                                            size: "sm",
+                                            className: "w-8 h-8 rounded-full p-0",
+                                            style: {
+                                                backgroundColor: text.trim().length > 0 && !isTyping ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].grayMedium,
+                                                color: text.trim().length > 0 && !isTyping ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].gray
+                                            },
+                                            children: isTyping ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                                className: "w-3 h-3 animate-spin"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/FloatingChat.tsx",
+                                                lineNumber: 206,
+                                                columnNumber: 31
+                                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
+                                                className: "w-3 h-3"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/FloatingChat.tsx",
+                                                lineNumber: 206,
+                                                columnNumber: 78
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FloatingChat.tsx",
-                                            lineNumber: 145,
-                                            columnNumber: 16
+                                            lineNumber: 202,
+                                            columnNumber: 17
                                         }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/FloatingChat.tsx",
-                                        lineNumber: 142,
-                                        columnNumber: 54
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/FloatingChat.tsx",
+                                    lineNumber: 195,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/src/components/FloatingChat.tsx",
-                                lineNumber: 135,
-                                columnNumber: 12
+                                lineNumber: 192,
+                                columnNumber: 13
                             }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/FloatingChat.tsx",
-                            lineNumber: 133,
-                            columnNumber: 55
-                        }, this)
-                    ]
-                }, void 0, true, {
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/FloatingChat.tsx",
+                        lineNumber: 121,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/FloatingChat.tsx",
+                lineNumber: 95,
+                columnNumber: 18
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                onClick: ()=>setIsOpen(!isOpen),
+                className: "w-14 h-14 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110",
+                style: {
+                    backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary,
+                    color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary
+                },
+                children: isOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                    className: "w-6 h-6"
+                }, void 0, false, {
                     fileName: "[project]/src/components/FloatingChat.tsx",
-                    lineNumber: 109,
-                    columnNumber: 151
+                    lineNumber: 218,
+                    columnNumber: 19
+                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__["MessageCircle"], {
+                    className: "w-6 h-6"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/FloatingChat.tsx",
+                    lineNumber: 218,
+                    columnNumber: 47
                 }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/FloatingChat.tsx",
-            lineNumber: 101,
-            columnNumber: 20
-        }, this);
-        $[6] = handleKeyPress;
-        $[7] = isOpen;
-        $[8] = isTyping;
-        $[9] = messages;
-        $[10] = sendMessage;
-        $[11] = text;
-        $[12] = t3;
-    } else {
-        t3 = $[12];
-    }
-    let t4;
-    if ($[13] !== isOpen) {
-        t4 = ({
-            "FloatingChat[<Button>.onClick]": ()=>setIsOpen(!isOpen)
-        })["FloatingChat[<Button>.onClick]"];
-        $[13] = isOpen;
-        $[14] = t4;
-    } else {
-        t4 = $[14];
-    }
-    let t5;
-    if ($[15] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = {
-            backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].primary,
-            color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$colors$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLORS"].textOnPrimary
-        };
-        $[15] = t5;
-    } else {
-        t5 = $[15];
-    }
-    let t6;
-    if ($[16] !== isOpen) {
-        t6 = isOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-            className: "w-6 h-6"
-        }, void 0, false, {
-            fileName: "[project]/src/components/FloatingChat.tsx",
-            lineNumber: 178,
-            columnNumber: 19
-        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__["MessageCircle"], {
-            className: "w-6 h-6"
-        }, void 0, false, {
-            fileName: "[project]/src/components/FloatingChat.tsx",
-            lineNumber: 178,
-            columnNumber: 47
-        }, this);
-        $[16] = isOpen;
-        $[17] = t6;
-    } else {
-        t6 = $[17];
-    }
-    let t7;
-    if ($[18] !== t4 || $[19] !== t6) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-            onClick: t4,
-            className: "w-14 h-14 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110",
-            style: t5,
-            children: t6
-        }, void 0, false, {
-            fileName: "[project]/src/components/FloatingChat.tsx",
-            lineNumber: 186,
-            columnNumber: 10
-        }, this);
-        $[18] = t4;
-        $[19] = t6;
-        $[20] = t7;
-    } else {
-        t7 = $[20];
-    }
-    let t8;
-    if ($[21] !== t3 || $[22] !== t7) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "fixed bottom-6 right-6 z-50",
-            children: [
-                t3,
-                t7
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/FloatingChat.tsx",
-            lineNumber: 195,
-            columnNumber: 10
-        }, this);
-        $[21] = t3;
-        $[22] = t7;
-        $[23] = t8;
-    } else {
-        t8 = $[23];
-    }
-    return t8;
+            }, void 0, false, {
+                fileName: "[project]/src/components/FloatingChat.tsx",
+                lineNumber: 214,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/FloatingChat.tsx",
+        lineNumber: 93,
+        columnNumber: 10
+    }, this);
 }
-_s(FloatingChat, "G8msEeADU2ew6S6rVfBaunukYF0=");
+_s(FloatingChat, "Z2ntoWEQdCV82iPxuWpTSgPzTSk=");
 _c = FloatingChat;
-function _FloatingChatFormatTime(timestamp) {
-    const date = new Date(timestamp);
-    return date.toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit"
-    });
-}
 var _c;
 __turbopack_context__.k.register(_c, "FloatingChat");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
