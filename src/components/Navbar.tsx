@@ -11,7 +11,7 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "How It Works", href: "./howitworks" },
     { label: "Support", href: "/chat" },
-    { label: "Features", href: "#features" },
+    { label: "Products", href: "#products" },
     { label: "Contact", href: "./contact" },
   ];
 
@@ -22,10 +22,10 @@ export default function Navbar() {
         <Link href="/" className="flex items-center space-x-3">
           <Image
             src="/images/hello-solar-logo2.jpeg"
-            alt="Hello Solar Logo"
+            alt="Hello Solar"
             width={60}
             height={60}
-            className="rounded-full"
+            className="rounded-full border-2 border-yellow-300"
           />
           <span className="text-2xl font-bold text-primary-700 hidden sm:block">
             Hello Solar
@@ -73,11 +73,11 @@ export default function Navbar() {
 
               <div className="self-center">
                 <Image
-                  src="/images/hello-solar-logo.jpeg"
-                  alt="Hello Solar Logo"
-                  width={60}
-                  height={60}
-                  className="rounded-full"
+                  src="/images/hello-solar-logo2.jpeg"
+                  alt="Hello Solar"
+                  width={45}
+                  height={45}
+                  className="rounded-full border-2 border-yellow-300"
                 />
                 </div>
 

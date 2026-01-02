@@ -41,7 +41,7 @@ export default function HomePage() {
             src="/images/hello-solar-logo2.jpeg"
             alt="Hello Solar Logo"
            
-            className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-yellow-300"
+            className="w-24 h-24 mx-auto mb-6 rounded-full border-3 border-yellow-300"
           />
 
           <h1 className="text-5xl md:text-6xl font-bold mb-4">

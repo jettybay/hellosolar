@@ -9,30 +9,21 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-950 text-gray-400">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-6 flex flex-col items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/images/hello-solar-logo2.jpeg"
-                alt="Hello Solar Logo"
-                width={50}
-                height={50}
-                className="rounded-full"
-              />
-              <span className="text-xl font-bold text-white">Hello Solar</span>
-            </div>
-            <p className="text-sm leading-relaxed">
+          
+            {/* <p className="text-sm leading-relaxed">
               Your trusted partner for 24/7 solar energy support, expert guidance, 
               and professional installation services.
-            </p>
+            </p> */}
             <p className="text-sm font-medium text-yellow-400">
               A Subsidiary of Solar Slot Limited
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -57,9 +48,9 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
-          {/* Services */}
+          {/* Services
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -68,11 +59,11 @@ export default function Footer() {
               <li className="text-sm">Installation Coordination</li>
               <li className="text-sm">Solar Office Locator</li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+            {/* <h3 className="text-white font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -92,10 +83,10 @@ export default function Footer() {
                   support@hello-solar.com
                 </a>
               </li>
-            </ul>
+            </ul> */}
 
             {/* Social Media */}
-            <div className="mt-6">
+            <div className="mt-1">
               <h4 className="text-white font-medium mb-3">Follow Us</h4>
               <div className="flex gap-3">
                 <a

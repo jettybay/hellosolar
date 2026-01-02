@@ -12,12 +12,16 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import FloatingChat from "@/components/FloatingChat";
+import Navbar from "@/components/Navbar";
 
 export default function ContactPage() {
   return (
+    <>
+      <Navbar />
+      
     <main className="bg-white text-gray-900 overflow-hidden">
-      {/* HERO */}
-      <section className="bg-gradient-to-br from-green-600 to-emerald-500 text-white py-20">
+      {/* HERO
+      <section className="bg-gradient-to-br from-green-600 to-emerald-500 text-white py-2">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,15 +31,13 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Contact Us
           </h1>
-          <p className="text-lg opacity-95 max-w-2xl mx-auto">
-            Reach out for solar support, enquiries, partnerships, or technical assistance.
-          </p>
+         
         </motion.div>
-      </section>
+      </section> */}
 
       {/* CONTENT */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14">
+      <section className="py-10">
+        <div className="max-w-6xl mx-auto px-6">
           
           {/* CONTACT DETAILS */}
           <motion.div
@@ -43,10 +45,15 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center text-center"
           >
-            <h2 className="text-3xl font-bold mb-8">
+            <h2 className="text-4xl font-bold mb-2">
               Get in Touch
             </h2>
+
+           <p className="opacity-95 max-w-2xl pb-7 text-green-600">
+            Reach out for solar support, enquiries, partnerships, or technical assistance.
+          </p>
 
             <div className="space-y-6">
               <ContactItem
@@ -69,7 +76,7 @@ export default function ContactPage() {
             </div>
 
             {/* SOCIAL MEDIA */}
-            <div className="mt-10">
+            <div className="mt-10 flex flex-col items-center">
               <h3 className="text-lg font-semibold mb-4">
                 Connect with us
               </h3>
@@ -146,7 +153,9 @@ export default function ContactPage() {
       <Footer />
       <FloatingChat />
     </main>
+    </>
   );
+
 }
 
 /* ---------- COMPONENTS ---------- */
@@ -166,7 +175,7 @@ function ContactItem({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="flex gap-4"
+      className="flex flex-col items-center text-center"
     >
       <div className="text-green-600 mt-1">{icon}</div>
       <div>
