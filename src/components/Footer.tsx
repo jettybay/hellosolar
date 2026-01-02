@@ -24,7 +24,7 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-3">Follow Us</h4>
             <div className="flex justify-center gap-3">
               <a
-                href="https://facebook.com/hellosolar"
+                href="https://www.facebook.com/share/1A2RCWJAs7/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"

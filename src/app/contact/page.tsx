@@ -85,7 +85,7 @@ export default function ContactPage() {
               <div className="flex gap-5">
                 <SocialIcon
                   icon={<Facebook />}
-                  link="https://facebook.com/hellosolar"
+                  link="https://www.facebook.com/share/1A2RCWJAs7/"
                 />
                 <SocialIcon
                   icon={<Instagram />}
