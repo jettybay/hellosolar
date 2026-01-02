@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import {
   PhoneCall,
   MapPin,
@@ -229,6 +230,71 @@ function StatCard({
   );
 }
 
+// Animated Wave Component
+function AnimatedWave() {
+  const [pathD, setPathD] = useState(
+    "M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+  );
+
+  useEffect(() => {
+    let animationFrameId: number;
+    let time = 0;
+
+    const animate = () => {
+      time += 0.02;
+      const amplitude = 5;
+
+      const getY = (baseY: number, x: number) => {
+        return baseY + Math.sin(time + x * 0.005) * amplitude;
+      };
+
+      const p1 = { x: 60, y: 105 };
+      const c1_1 = { x: 120, y: 90 };
+      const c1_2 = { x: 240, y: 60 };
+      const p2 = { x: 360, y: 45 };
+      const c2_1 = { x: 480, y: 30 };
+      const c2_2 = { x: 600, y: 30 };
+      const p3 = { x: 720, y: 37.5 };
+      const c3_1 = { x: 840, y: 45 };
+      const c3_2 = { x: 960, y: 60 };
+      const p4 = { x: 1080, y: 67.5 };
+      const c4_1 = { x: 1200, y: 75 };
+      const c4_2 = { x: 1320, y: 75 };
+      const p5 = { x: 1380, y: 75 };
+      const p6 = { x: 1440, y: 75 };
+
+      const d = [
+        `M0 120`,
+        `L${p1.x} ${getY(p1.y, p1.x)}`,
+        `C${c1_1.x} ${getY(c1_1.y, c1_1.x)} ${c1_2.x} ${getY(c1_2.y, c1_2.x)} ${p2.x} ${getY(p2.y, p2.x)}`,
+        `C${c2_1.x} ${getY(c2_1.y, c2_1.x)} ${c2_2.x} ${getY(c2_2.y, c2_2.x)} ${p3.x} ${getY(p3.y, p3.x)}`,
+        `C${c3_1.x} ${getY(c3_1.y, c3_1.x)} ${c3_2.x} ${getY(c3_2.y, c3_2.x)} ${p4.x} ${getY(p4.y, p4.x)}`,
+        `C${c4_1.x} ${getY(c4_1.y, c4_1.x)} ${c4_2.x} ${getY(c4_2.y, c4_2.x)} ${p5.x} ${getY(p5.y, p5.x)}`,
+        `L${p6.x} ${getY(p6.y, p6.x)}`,
+        `V120 H0 Z`
+      ].join(" ");
+
+      setPathD(d);
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
+
+  return (
+    <svg
+      viewBox="0 0 1440 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-20 md:h-auto"
+      preserveAspectRatio="none"
+    >
+      <path d={pathD} className="fill-background" />
+    </svg>
+  );
+}
+
 export default function HowItWorksPage() {
   return (
     <>
@@ -266,17 +332,7 @@ export default function HowItWorksPage() {
 
           {/* Wave Divider - Enhanced with more curves and better mobile visibility */}
           <div className="absolute bottom-0 left-0 right-0">
-          <svg
-              viewBox="0 0 1440 120"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-auto"
-            >
-              <path
-                d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-                className="fill-background"
-              />
-            </svg>
+            <AnimatedWave />
           </div>
         </section>
 
@@ -581,4 +637,3 @@ export default function HowItWorksPage() {
     </>
     );
   }
-
