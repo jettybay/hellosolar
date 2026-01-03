@@ -94,9 +94,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 md:gap-8 items-center">
             <motion.div
-              initial={{ scale: 0, rotate: -180, opacity: 0 }}
+              initial={{ scale: 0, rotate: -1440, opacity: 0 }}
               whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
-              transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.5 }}
               viewport={{ once: true }}
               className="cursor-pointer"
               onClick={() => setSelectedImage("/images/ads1.jpeg")}
@@ -117,9 +117,9 @@ export default function HomePage() {
             </motion.div>
 
             <motion.div
-              initial={{ scale: 0, rotate: 180, opacity: 0 }}
+              initial={{ scale: 0, rotate: 1440, opacity: 0 }}
               whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
-              transition={{ duration: 0.8, type: "spring", bounce: 0.5, delay: 0.2 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
               className="cursor-pointer"
               onClick={() => setSelectedImage("/images/ads2.jpeg")}
