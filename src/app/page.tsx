@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   PhoneCall,
   Sun,
@@ -75,6 +79,58 @@ export default function HomePage() {
                 Talk to AI Assistant
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================
+          PROMOTIONAL ADS
+      ========================== */}
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 md:gap-8 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ y: [0, -15, 0] }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+              }}
+              viewport={{ once: true }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer"
+            >
+              <Image
+                src="/images/ads1.jpeg"
+                alt="Special Solar Offer 1"
+                width={800}
+                height={1000}
+                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ y: [0, -15, 0] }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: 0.2,
+                y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
+              }}
+              viewport={{ once: true }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer"
+            >
+              <Image
+                src="/images/ads2.jpeg"
+                alt="Special Solar Offer 2"
+                width={800}
+                height={1000}
+                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
