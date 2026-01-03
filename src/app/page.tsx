@@ -86,7 +86,7 @@ export default function HomePage() {
       {/* =========================
           PROMOTIONAL ADS
       ========================== */}
-      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 md:gap-8 items-center">
             <motion.div
@@ -138,7 +138,7 @@ export default function HomePage() {
       {/* =========================
           3️⃣ SUPPORT SERVICES
       ========================== */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-2 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
             How We Support You
