@@ -11,7 +11,7 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "How It Works", href: "./howitworks" },
     { label: "Support", href: "/chat" },
-    { label: "Products", href: "#products" },
+    { label: "Products", href: "./products" },
     { label: "Contact", href: "./contact" },
   ];
 
