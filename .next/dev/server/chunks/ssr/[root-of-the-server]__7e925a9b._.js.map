@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/abdulfataiojetimi/hellosolar/src/lib/colors.ts"],"sourcesContent":["export const COLORS = {\n  // Primary colors\n  primary: '#22c55e',\n  primaryDark: '#15803d',\n  \n  // Solar theme colors\n  solarGreen: '#22c55e',\n  solarGreenDark: '#15803d',\n  solarYellow: '#facc15',\n  solarYellowDark: '#eab308',\n  solarRed: '#ef4444',\n  solarRedDark: '#dc2626',\n  solarBlack: '#0f172a',\n  solarGray: '#64748b',\n  \n  // UI colors\n  background: '#f8fafc',\n  surface: '#ffffff',\n  surfaceVariant: '#f1f5f9',\n  \n  // Text colors\n  textPrimary: '#020617',\n  textSecondary: '#64748b',\n  textOnPrimary: '#ffffff',\n  gray: '#6b7280',\n  grayMedium: '#d1d5db',\n  success: '#10b981',\n  \n  // Border colors\n  border: '#e2e8f0',\n};\n"],"names":[],"mappings":";;;;AAAO,MAAM,SAAS;IACpB,iBAAiB;IACjB,SAAS;IACT,aAAa;IAEb,qBAAqB;IACrB,YAAY;IACZ,gBAAgB;IAChB,aAAa;IACb,iBAAiB;IACjB,UAAU;IACV,cAAc;IACd,YAAY;IACZ,WAAW;IAEX,YAAY;IACZ,YAAY;IACZ,SAAS;IACT,gBAAgB;IAEhB,cAAc;IACd,aAAa;IACb,eAAe;IACf,eAAe;IACf,MAAM;IACN,YAAY;IACZ,SAAS;IAET,gBAAgB;IAChB,QAAQ;AACV"}}]
-}

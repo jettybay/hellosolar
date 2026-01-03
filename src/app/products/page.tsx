@@ -12,6 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 interface Product {
   title: string;
@@ -92,6 +93,7 @@ const stats = [
 export default function ProductsPage() {
   return (
     <main className="bg-white text-gray-900 overflow-hidden">
+      <Navbar />
 
 
       {/* PRODUCTS */}
@@ -383,4 +385,3 @@ export default function ProductsPage() {
     </main>
   );
 }
-
