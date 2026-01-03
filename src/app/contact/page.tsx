@@ -89,7 +89,7 @@ export default function ContactPage() {
                 />
                 <SocialIcon
                   icon={<Instagram />}
-                  link="https://instagram.com/hellosolar"
+                  link="https://www.instagram.com/solarslot?igsh=djdxcmhsYnFmMWp4"
                 />
                 <SocialIcon
                   icon={<X />}

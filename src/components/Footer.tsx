@@ -32,7 +32,7 @@ export default function Footer() {
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com/hellosolar"
+                href="https://www.instagram.com/solarslot?igsh=djdxcmhsYnFmMWp4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 hover:bg-green-600 hover:border-green-600 hover:text-white transition-all"
