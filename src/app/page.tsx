@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   PhoneCall,
   Sun,
@@ -5,7 +10,8 @@ import {
   Bot,
   Phone,
   TrendingUp,
-  Shield
+  Shield,
+  X
 } from "lucide-react";
 import Link from "next/link";
 
@@ -17,6 +23,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <>
       <Navbar />
@@ -80,9 +88,64 @@ export default function HomePage() {
       </section>
 
       {/* =========================
+          PROMOTIONAL ADS
+      ========================== */}
+      <section className="py-12 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 md:gap-8 items-center">
+            <motion.div
+              initial={{ scale: 0, rotate: -1440, opacity: 0 }}
+              whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.5 }}
+              viewport={{ once: true }}
+              className="cursor-pointer"
+              onClick={() => setSelectedImage("/images/ads1.jpeg")}
+            >
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="relative rounded-2xl overflow-hidden shadow-2xl group"
+              >
+                <Image
+                  src="/images/ads1.jpeg"
+                  alt="Special Solar Offer 1"
+                  width={800}
+                  height={1000}
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 0, rotate: 1440, opacity: 0 }}
+              whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="cursor-pointer"
+              onClick={() => setSelectedImage("/images/ads2.jpeg")}
+            >
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+                className="relative rounded-2xl overflow-hidden shadow-2xl group"
+              >
+                <Image
+                  src="/images/ads2.jpeg"
+                  alt="Special Solar Offer 2"
+                  width={800}
+                  height={1000}
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================
           3️⃣ SUPPORT SERVICES
       ========================== */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-2 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
             How We Support You
@@ -208,6 +271,41 @@ export default function HomePage() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="relative max-w-3xl w-full max-h-[90vh] flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-12 right-0 text-white hover:text-yellow-400 transition-colors p-2"
+              >
+                <X size={32} />
+              </button>
+              <Image
+                src={selectedImage}
+                alt="Special Offer Full View"
+                width={800}
+                height={1000}
+                className="rounded-xl shadow-2xl object-contain max-h-[85vh] w-auto"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Floating Chat Component */}
       <FloatingChat />

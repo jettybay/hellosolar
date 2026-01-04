@@ -1,77 +1,19 @@
-[00:00:01.402] Server  LOG     ✓ Ready in 1014ms
-[00:00:09.606] Server  WARN    ⚠ Cross origin request detected from 172.20.10.3 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:09.824] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:55.582] Browser WARN    Image with src "/images/Solar Street light.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:55.582] Browser WARN    Image with src "/images/Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:55.582] Browser WARN    Image with src "/images/Installed Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:55.706] Browser WARN    Image with src "/images/Solar System.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:04.576] Server  LOG     ✓ Compiled in 320ms
-[00:02:04.680] Browser ERROR   uncaughtError: ReferenceError: Footer is not defined
-[00:02:18.232] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:02:18.277] Server  LOG     ✓ Compiled in 124ms
-[00:02:18.696] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:18.930] Browser WARN    Image with src "/images/Solar System.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:18.930] Browser WARN    Image with src "/images/Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:18.930] Browser WARN    Image with src "/images/Installed Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:18.930] Browser WARN    Image with src "/images/Solar Street light.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:25.722] Server  LOG     ✓ Compiled in 219ms
-[00:02:25.821] Browser ERROR   uncaughtError: ReferenceError: Footer is not defined
-[00:03:05.247] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:05.334] Server  LOG     ✓ Compiled in 343ms
-[00:03:05.571] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:05.790] Browser WARN    Image with src "/images/Solar System.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:05.790] Browser WARN    Image with src "/images/Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:05.790] Browser WARN    Image with src "/images/Installed Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:05.790] Browser WARN    Image with src "/images/Solar Street light.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:04:34.363] Server  LOG     ✓ Compiled in 474ms
-[00:04:41.231] Server  LOG     ✓ Compiled in 377ms
-[00:04:47.827] Server  LOG     ✓ Compiled in 565ms
-[00:16:26.669] Server  LOG     ✓ Compiled in 62ms
-[00:16:26.779] Browser ERROR   ./src/app/products/page.tsx:118:7
-Parsing ecmascript source code failed
-  116 |           </motion.div>
-  117 |         </motion.div>
-> 118 |       </section>
-      |       ^
-  119 |
-  120 |       {/* STATS BAR */}
-  121 |       <section className="bg-gray-50 py-12 border-y border-gray-100">
-
-Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./src/app/products/page.tsx [Client Component Browser]
-    ./src/app/products/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/app/products/page.tsx [Client Component SSR]
-    ./src/app/products/page.tsx [Server Component]
-[00:16:26.779] Browser ERROR   ./src/app/products/page.tsx:118:8
-Parsing ecmascript source code failed
-  116 |           </motion.div>
-  117 |         </motion.div>
-> 118 |       </section>
-      |        ^^^^^^^^^
-  119 |
-  120 |       {/* STATS BAR */}
-  121 |       <section className="bg-gray-50 py-12 border-y border-gray-100">
-
-Unterminated regexp literal
-
-Import traces:
-  Client Component Browser:
-    ./src/app/products/page.tsx [Client Component Browser]
-    ./src/app/products/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/app/products/page.tsx [Client Component SSR]
-    ./src/app/products/page.tsx [Server Component]
-[00:16:46.700] Server  LOG     ✓ Compiled in 271ms
-[00:18:34.369] Server  LOG     ✓ Compiled in 354ms
-[00:18:41.552] Server  LOG     ✓ Compiled in 174ms
-[00:19:01.969] Server  LOG     ✓ Compiled in 210ms
-[00:19:28.340] Server  LOG     ✓ Compiled in 125ms
-[00:19:33.744] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:20:36.977] Server  LOG     ✓ Compiled in 188ms
+[00:00:01.621] Server  LOG     ✓ Ready in 1175ms
+[00:00:19.885] Server  LOG     ○ Compiling / ...
+[00:00:55.611] Browser WARN    Image with src "/images/Solar Street light.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:55.611] Browser WARN    Image with src "/images/Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:55.611] Browser WARN    Image with src "/images/Installed Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:55.740] Browser WARN    Image with src "/images/Solar System.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:51.776] Server  LOG     ✓ Compiled in 674ms
+[00:03:03.875] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:03:03.875] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:13:45.228] Server  LOG     ✓ Compiled in 256ms
+[00:15:48.270] Server  LOG     ✓ Compiled in 419ms
+[00:16:41.520] Server  LOG     ✓ Compiled in 168ms
+[00:17:02.880] Server  LOG     ✓ Compiled in 237ms
+[00:19:12.598] Server  LOG     ✓ Compiled in 181ms
+[00:19:18.135] Server  LOG     ✓ Compiled in 170ms
+[00:20:17.486] Server  LOG     ✓ Compiled in 178ms
+[00:32:41.770] Server  LOG     ✓ Compiled in 920ms
+[00:34:33.630] Server  LOG     ✓ Compiled in 314ms
+[00:36:26.239] Server  LOG     ✓ Compiled in 405ms
