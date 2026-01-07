@@ -1,19 +1,7 @@
-[00:00:01.621] Server  LOG     ✓ Ready in 1175ms
-[00:00:19.885] Server  LOG     ○ Compiling / ...
-[00:00:55.611] Browser WARN    Image with src "/images/Solar Street light.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:55.611] Browser WARN    Image with src "/images/Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:55.611] Browser WARN    Image with src "/images/Installed Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:55.740] Browser WARN    Image with src "/images/Solar System.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:51.776] Server  LOG     ✓ Compiled in 674ms
-[00:03:03.875] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:03:03.875] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:13:45.228] Server  LOG     ✓ Compiled in 256ms
-[00:15:48.270] Server  LOG     ✓ Compiled in 419ms
-[00:16:41.520] Server  LOG     ✓ Compiled in 168ms
-[00:17:02.880] Server  LOG     ✓ Compiled in 237ms
-[00:19:12.598] Server  LOG     ✓ Compiled in 181ms
-[00:19:18.135] Server  LOG     ✓ Compiled in 170ms
-[00:20:17.486] Server  LOG     ✓ Compiled in 178ms
-[00:32:41.770] Server  LOG     ✓ Compiled in 920ms
-[00:34:33.630] Server  LOG     ✓ Compiled in 314ms
-[00:36:26.239] Server  LOG     ✓ Compiled in 405ms
+[00:00:01.499] Server  LOG     ✓ Ready in 1074ms
+[00:00:08.194] Server  LOG     ○ Compiling / ...
+[00:00:09.743] Server  WARN    ⚠ Cross origin request detected from 172.20.10.3 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:13:27.390] Server  LOG     ✓ Compiled in 1021ms
+[00:24:54.226] Server  LOG     ✓ Compiled in 399ms
+[00:42:29.979] Server  LOG     ✓ Compiled in 692ms

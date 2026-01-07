@@ -65,14 +65,19 @@ export default function HomePage() {
           </Badge>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-           <Link href="tel:09020935919">
-            <Button
-              size="lg"
-            className="border-white text-black hover:bg-white hover:text-yellow-400"
+            <motion.div
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >
-              Call Our Agents
-            </Button>
-           </Link>
+              <Link href="tel:09020935919">
+                <Button
+                  size="lg"
+                  className="border-white text-black hover:bg-white hover:text-yellow-400"
+                >
+                  Call Our Agents
+                </Button>
+              </Link>
+            </motion.div>
            
 
             <Link href="/chat">
@@ -92,7 +97,7 @@ export default function HomePage() {
       ========================== */}
       <section className="py-12 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto grid grid-cols-2 gap-4 md:gap-8 items-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 items-center">
             <motion.div
               initial={{ scale: 0, rotate: -1440, opacity: 0 }}
               whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
@@ -132,6 +137,52 @@ export default function HomePage() {
                 <Image
                   src="/images/ads2.jpeg"
                   alt="Special Solar Offer 2"
+                  width={800}
+                  height={1000}
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 0, rotate: -1440, opacity: 0 }}
+              whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="cursor-pointer"
+              onClick={() => setSelectedImage("/images/ads3.jpeg")}
+            >
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                className="relative rounded-2xl overflow-hidden shadow-2xl group"
+              >
+                <Image
+                  src="/images/ads3.jpeg"
+                  alt="Special Solar Offer 3"
+                  width={800}
+                  height={1000}
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 0, rotate: 1440, opacity: 0 }}
+              whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="cursor-pointer"
+              onClick={() => setSelectedImage("/images/ads4.jpeg")}
+            >
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+                className="relative rounded-2xl overflow-hidden shadow-2xl group"
+              >
+                <Image
+                  src="/images/ads4.jpeg"
+                  alt="Special Solar Offer 4"
                   width={800}
                   height={1000}
                   className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000"
