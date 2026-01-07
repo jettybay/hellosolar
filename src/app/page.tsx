@@ -65,14 +65,19 @@ export default function HomePage() {
           </Badge>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-           <Link href="tel:09020935919">
-            <Button
-              size="lg"
-            className="border-white text-black hover:bg-white hover:text-yellow-400"
+            <motion.div
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >
-              Call Our Agents
-            </Button>
-           </Link>
+              <Link href="tel:09020935919">
+                <Button
+                  size="lg"
+                  className="border-white text-black hover:bg-white hover:text-yellow-400"
+                >
+                  Call Our Agents
+                </Button>
+              </Link>
+            </motion.div>
            
 
             <Link href="/chat">
@@ -360,4 +365,3 @@ export default function HomePage() {
     </>
   );
 }
-
