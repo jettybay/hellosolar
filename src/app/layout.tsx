@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Hello Solar - 24/7 Solar Energy Support",
   description: "Get 24/7 everything about solar energy helpline. Emergency support, technical assistance, and expert consultation for all your solar energy needs.",
+  icons: {
+    icon: "/favicon_io/favicon.ico",
+    apple: "/favicon_io/apple-touch-icon.png",
+  },
+  manifest: "/favicon_io/site.webmanifest",
 };
 
 export default function RootLayout({
