@@ -66,13 +66,13 @@ export default function ContactPage() {
               <ContactItem
                 icon={<Phone />}
                 title="Phone"
-                text="+234 800 000 0000"
+                text="+2349020935919"
               />
 
               <ContactItem
                 icon={<Mail />}
                 title="Email"
-                text="support@hello-solar.com"
+                text="support@hellosolaar.com"
               />
             </div>
 
