@@ -128,7 +128,7 @@ function SignUpForm({
 
 
     <div className="space-y-2">
-        <Label htmlFor="whatsapp">Whatsapp number</Label>
+        <Label htmlFor="whatsapp">Whatsapp Digit</Label>
         <div className="relative">
           <MessageCircle className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
           <Input
