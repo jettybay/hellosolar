@@ -20,6 +20,23 @@ export const metadata: Metadata = {
     apple: "/favicon_io/apple-touch-icon.png",
   },
   manifest: "/favicon_io/site.webmanifest",
+  openGraph: {
+    title: "Hello Solar - 24/7 Solar Energy Support",
+    description: "Get 24/7 everything about solar energy.",
+    type: "website",
+    url: "https://hellosolaar.com",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/og-image.png"],
+  },
 };
 
 export default function RootLayout({
