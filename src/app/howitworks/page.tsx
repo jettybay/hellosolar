@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import {
   PhoneCall,
   MapPin,
@@ -16,8 +17,10 @@ import {
   Users,
   Award,
   Sparkles,
+  Loader2,
 } from "lucide-react";
 import Link from "next/link";
+import { supabase } from "../../../client";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -106,12 +109,14 @@ function PricingCard({
   features,
   highlight = false,
   buttonClassName,
+  onAction,
 }: {
   name: string;
   price: string;
   features: string[];
   highlight?: boolean;
   buttonClassName?: string;
+  onAction?: () => void;
 }) {
   return (
     <Card
@@ -158,6 +163,7 @@ function PricingCard({
               ? "bg-green-600 hover:bg-green-700"
               : "bg-gray-900 hover:bg-gray-800"
           }`}
+          onClick={onAction}
         >
           Get Started
           <ArrowRight className="w-4 h-4 ml-2" />
@@ -301,6 +307,81 @@ function AnimatedWave() {
 }
 
 export default function HowItWorksPage() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState<any>(null);
+  const [subscription, setSubscription] = useState<any>(null);
+  const [buttonConfig, setButtonConfig] = useState({
+    text: "Get Started",
+    action: () => router.push("/signup"),
+    disabled: false,
+  });
+
+  useEffect(() => {
+    async function checkUserAndSubscription() {
+      try {
+        // Fetch current user
+        const { data: { user: currentUser } } = await supabase.auth.getUser();
+        setUser(currentUser);
+
+        if (currentUser) {
+          // Fetch subscription if user is logged in
+          const { data: subData, error } = await supabase
+            .from("subscriptions")
+            .select("payment_status")
+            .eq("user_id", currentUser.id)
+            .single();
+
+          if (error) {
+            // No subscription found - treat as not paid
+            setSubscription(null);
+            setButtonConfig({
+              text: "Upgrade to Pro",
+              action: () => router.push("/pay"),
+              disabled: false,
+            });
+          } else {
+            setSubscription(subData);
+
+            // Set button configuration based on subscription status
+            if (subData?.payment_status !== "paid") {
+              setButtonConfig({
+                text: "Upgrade to Pro",
+                action: () => router.push("/pay"),
+                disabled: false,
+              });
+            } else {
+              setButtonConfig({
+                text: "Chat",
+                action: () => router.push("/chat"),
+                disabled: false,
+              });
+            }
+          }
+        } else {
+          // User not logged in
+          setButtonConfig({
+            text: "Get Started",
+            action: () => router.push("/signup"),
+            disabled: false,
+          });
+        }
+      } catch (error) {
+        console.error("Error fetching user/subscription:", error);
+        // Default to Get Started on error
+        setButtonConfig({
+          text: "Get Started",
+          action: () => router.push("/signup"),
+          disabled: false,
+        });
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    checkUserAndSubscription();
+  }, [router]);
+
   return (
     <>
       <Navbar />
@@ -576,6 +657,7 @@ export default function HowItWorksPage() {
                   "WhatsApp support",
                 ]}
                 highlight={true}
+                onAction={() => router.push("/auth/signup?plan=pro")}
               />
               <PricingCard
                 name="Enterprise"
@@ -617,17 +699,28 @@ export default function HowItWorksPage() {
                   Call 09020935919
                 </Link>
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/10"
-                asChild
-              >
-                <Link href="/chat">
+              {loading ? (
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10"
+                  disabled
+                >
+                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                  Loading...
+                </Button>
+              ) : (
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10"
+                  onClick={buttonConfig.action}
+                  disabled={buttonConfig.disabled}
+                >
                   <Bot className="w-5 h-5 mr-2" />
-                  Chat with AI
-                </Link>
-              </Button>
+                  {buttonConfig.text}
+                </Button>
+              )}
             </div>
 
             <p className="mt-6 text-green-200 text-sm">
