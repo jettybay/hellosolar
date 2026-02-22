@@ -22,3 +22,15 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:00:18.902] Browser WARN    Image with src "/images/2KW:1000W.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:00:18.902] Browser WARN    Image with src "/images/Solar standing fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:00:18.902] Browser WARN    Image with src "/images/16KW: 51.2V.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:44.204] Browser WARN    Image with src "/images/hello-solar-logo2.jpeg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:05:44.404] Browser WARN    Image with src "/images/500w:1000kwh.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:44.404] Browser WARN    Image with src "/images/1000w:2000kwh.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:44.404] Browser WARN    Image with src "/images/25W Solar Fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:44.404] Browser WARN    Image with src "/images/A lead-acid battery.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:44.404] Browser WARN    Image with src "/images/Solar table fan 1.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:44.404] Browser WARN    Image with src "/images/Solar table fan 2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:44.404] Browser WARN    Image with src "/images/500w:1000kwh.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:05:46.701] Browser WARN    Image with src "/images/2KW:1000W.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:46.701] Browser WARN    Image with src "/images/Solar standing fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
