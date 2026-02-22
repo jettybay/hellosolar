@@ -1,88 +1,24 @@
-[00:00:01.574] Server  LOG     ✓ Ready in 1172ms
-[00:00:01.576] Server  WARN    ⚠ Cross origin request detected from 172.20.10.3 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:01.632] Server  LOG     ✓ Ready in 1178ms
+[00:00:01.633] Server  WARN    ⚠ Cross origin request detected from 172.20.10.3 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:04.686] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:00:14.826] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/200ah-lead-acid-battery.jpg" "received" null
-[00:00:14.827] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-1.jpg" "received" null
-[00:00:14.829] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-2.jpg" "received" null
-[00:00:14.830] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/500w-1000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:00:14.835] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/1000w-2000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:00:14.840] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/25w-solar-fan.jpg" "received" null
-[00:00:15.063] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-standing-fan.jpg" "received" null
-[00:00:15.083] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/2kw-1000w-solar-generator-without-panel.jpg" "received" null
-[00:00:15.086] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/16kw-51.2v-lithium-battery.jpg" "received" null
-[00:03:34.456] Server  LOG     ✓ Compiled in 923ms
-[00:03:34.730] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/500w-1000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:03:34.731] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/1000w-2000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:03:34.792] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/25w-solar-fan.jpg" "received" null
-[00:03:34.853] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/200ah-lead-acid-battery.jpg" "received" null
-[00:03:34.871] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-1.jpg" "received" null
-[00:03:34.888] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-2.jpg" "received" null
-[00:03:35.087] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-standing-fan.jpg" "received" null
-[00:03:35.101] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/2kw-1000w-solar-generator-without-panel.jpg" "received" null
-[00:03:35.141] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/16kw-51.2v-lithium-battery.jpg" "received" null
-[00:03:35.154] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/500w-1000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:03:35.248] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/1000w-2000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:03:35.263] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/25w-solar-fan.jpg" "received" null
-[00:03:35.404] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/200ah-lead-acid-battery.jpg" "received" null
-[00:03:35.412] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-1.jpg" "received" null
-[00:03:35.449] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-2.jpg" "received" null
-[00:03:35.455] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-standing-fan.jpg" "received" null
-[00:03:35.494] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/2kw-1000w-solar-generator-without-panel.jpg" "received" null
-[00:03:35.507] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/16kw-51.2v-lithium-battery.jpg" "received" null
-[00:03:38.193] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:03:38.528] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/500w-1000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:03:38.641] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-1.jpg" "received" null
-[00:03:38.674] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-2.jpg" "received" null
-[00:03:38.688] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/25w-solar-fan.jpg" "received" null
-[00:03:38.763] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/1000w-2000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:03:38.777] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/200ah-lead-acid-battery.jpg" "received" null
-[00:03:38.974] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-standing-fan.jpg" "received" null
-[00:03:38.997] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/2kw-1000w-solar-generator-without-panel.jpg" "received" null
-[00:03:39.001] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/16kw-51.2v-lithium-battery.jpg" "received" null
-[00:03:39.108] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/500w-1000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:03:39.113] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/1000w-2000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:03:39.219] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/25w-solar-fan.jpg" "received" null
-[00:03:39.235] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/200ah-lead-acid-battery.jpg" "received" null
-[00:03:39.274] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-1.jpg" "received" null
-[00:03:39.336] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-2.jpg" "received" null
-[00:03:39.376] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-standing-fan.jpg" "received" null
-[00:03:39.422] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/2kw-1000w-solar-generator-without-panel.jpg" "received" null
-[00:03:39.432] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/16kw-51.2v-lithium-battery.jpg" "received" null
-[00:06:36.961] Server  LOG     ✓ Compiled in 390ms
-[00:06:37.189] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/a-lead-acid-battery-with-a-sufficient-capacity-of-200ah.jpg" "received" null
-[00:06:37.202] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/a-lead-acid-battery-with-a-sufficient-capacity-of-200ah.jpg" "received" null
-[00:06:47.111] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:06:47.447] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/500w-1000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:06:47.566] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-1.jpg" "received" null
-[00:06:47.612] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-2.jpg" "received" null
-[00:06:47.625] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-standing-fan.jpg" "received" null
-[00:06:47.695] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/2kw-1000w-solar-generator-without-panel.jpg" "received" null
-[00:06:47.708] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/16kw-51.2v-lithium-battery.jpg" "received" null
-[00:06:47.867] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/a-lead-acid-battery-with-a-sufficient-capacity-of-200ah.jpg" "received" null
-[00:06:47.947] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-1.jpg" "received" null
-[00:06:48.022] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-table-fan-2.jpg" "received" null
-[00:06:48.070] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/solar-standing-fan.jpg" "received" null
-[00:06:48.113] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/2kw-1000w-solar-generator-without-panel.jpg" "received" null
-[00:06:48.159] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/16kw-51.2v-lithium-battery.jpg" "received" null
-[00:06:48.213] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/500w-1000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:06:48.281] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/1000w-2000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:06:48.331] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/25w-solar-fan.jpg" "received" null
-[00:06:48.338] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/a-lead-acid-battery-with-a-sufficient-capacity-of-200ah.jpg" "received" null
-[00:06:48.917] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/1000w-2000kwh-solar-generator-wall-mount-without-solar-panel.jpg" "received" null
-[00:06:48.926] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/25w-solar-fan.jpg" "received" null
-[00:07:07.560] Server  LOG     ✓ Compiled in 346ms
-[00:07:07.752] Browser WARN    Image with src "/images/Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:07:07.752] Browser WARN    Image with src "/images/Solar System.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:07:07.752] Browser WARN    Image with src "/images/Installed Inverter.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:07:07.752] Browser WARN    Image with src "/images/Solar Street light.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.101] Server  LOG     ✓ Compiled in 319ms
-[00:10:45.753] Browser WARN    Image with src "/images/1000w:2000kwh.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.753] Browser WARN    Image with src "/images/500w:1000kwh .jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.753] Browser WARN    Image with src "/images/25W Solar Fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.754] Browser WARN    Image with src "/images/A lead-acid battery.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.754] Browser WARN    Image with src "/images/Solar table fan 1.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.754] Browser WARN    Image with src "/images/Solar table fan 2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.754] Browser WARN    Image with src "/images/2KW:1000W.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.754] Browser WARN    Image with src "/images/16KW: 51.2V.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:45.754] Browser WARN    Image with src "/images/Solar standing fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:04.427] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:05.726] Browser WARN    Image with src "/images/500w:1000kwh.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.726] Browser WARN    Image with src "/images/1000w:2000kwh.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.726] Browser WARN    Image with src "/images/25W Solar Fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.726] Browser WARN    Image with src "/images/A lead-acid battery.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.726] Browser WARN    Image with src "/images/Solar table fan 1.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.726] Browser WARN    Image with src "/images/Solar table fan 2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.726] Browser WARN    Image with src "/images/Solar standing fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.726] Browser WARN    Image with src "/images/500w:1000kwh.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:05.726] Browser WARN    Image with src "/images/2KW:1000W.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:05.726] Browser WARN    Image with src "/images/16KW: 51.2V.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/1000w:2000kwh.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/500w:1000kwh.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/25W Solar Fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/A lead-acid battery.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/Solar table fan 1.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/Solar table fan 2.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/2KW:1000W.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/Solar standing fan.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.902] Browser WARN    Image with src "/images/16KW: 51.2V.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

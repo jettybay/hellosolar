@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import {
   BatteryCharging,
   Sun,
@@ -31,7 +32,7 @@ const products: Product[] = [
     description: "Compact, wall-mounted backup power for essential home and office loads.",
     price: "₦370,000",
     icon: <Zap />,
-    image: "/images/500w:1000kwh .jpeg",
+    image: "/images/500w:1000kwh.png",
     imageAlt: "500W/1000kWh wall-mounted solar generator without panel",
     imageDescription: "Space-saving wall-mount design, easy to maintain",
     features: [
@@ -162,6 +163,16 @@ const stats = [
 ];
 
 export default function ProductsPage() {
+  const [lightbox, setLightbox] = useState<null | { src: string; alt: string; title: string; price?: string }>(null);
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
   return (
     <main className="bg-white text-gray-900 overflow-hidden">
       <Navbar />
@@ -197,7 +208,12 @@ export default function ProductsPage() {
                 className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100"
               >
                 {/* Image Section */}
-                <div className="relative h-64 md:h-72 overflow-hidden">
+                <div
+                  className="relative h-64 md:h-72 overflow-hidden cursor-zoom-in"
+                  role="button"
+                  aria-label={`View ${product.title}`}
+                  onClick={() => setLightbox({ src: product.image, alt: product.imageAlt, title: product.title, price: product.price })}
+                >
                   <Image
                     src={product.image}
                     alt={product.imageAlt}
@@ -290,7 +306,12 @@ export default function ProductsPage() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
               >
-                <div className="aspect-[4/5] relative">
+                <div
+                  className="aspect-[4/5] relative cursor-zoom-in"
+                  role="button"
+                  aria-label={`View ${product.title}`}
+                  onClick={() => setLightbox({ src: product.image, alt: product.imageAlt, title: product.title, price: product.price })}
+                >
                   <Image
                     src={product.image}
                     alt={product.imageAlt}
@@ -460,6 +481,55 @@ export default function ProductsPage() {
           </div>
         </motion.div>
       </section> */}
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            key="lightbox"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={() => setLightbox(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              className="relative w-full max-w-5xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setLightbox(null)}
+                aria-label="Close"
+                className="absolute -top-10 right-0 text-white/90 hover:text-white bg-white/10 hover:bg-white/20 rounded-full px-3 py-1 text-sm"
+              >
+                Close
+              </button>
+              <div className="relative w-full h-[70vh] rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+                <Image
+                  src={lightbox.src}
+                  alt={lightbox.alt}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                  priority
+                />
+              </div>
+              <div className="mt-4 flex items-center justify-between text-white/90">
+                <div className="text-lg font-semibold">{lightbox.title}</div>
+                {lightbox.price ? (
+                  <div className="bg-green-600 text-white rounded-lg px-3 py-1 font-semibold">
+                    {lightbox.price}
+                  </div>
+                ) : null}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </main>
