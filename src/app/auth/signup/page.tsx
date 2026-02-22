@@ -23,8 +23,6 @@ import {
   User, 
   MessageCircle,
   Sparkles,
-  Eye,
-  EyeOff
 } from "lucide-react";
 
 // Loading component for Suspense boundary
@@ -44,38 +42,36 @@ function SignUpForm({
   onNext, 
   formData, 
   setFormData,
-  loading 
+  loading,
+  setLoading
 }: { 
   onNext: () => void;
   formData: any;
   setFormData: (data: any) => void;
   loading: boolean;
+  setLoading: (loading: boolean) => void;
 }) {
   const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
-    if (!formData.name || !formData.email || !formData.password) {
+    if (!formData.name || !formData.email) {
       setError("Please fill in all fields");
       return;
     }
 
-    if (formData.password.length < 6) {
-      setError("Password must be at least 6 characters");
-      return;
-    }
-
+    setLoading(true);
     try {
-      // Sign up with Supabase
-      const { data: authData, error: authError } = await supabase.auth.signUp({
-        email: formData.email,
-        password: formData.password,
+      // Send OTP with Supabase
+      const { error: authError } = await supabase.auth.signInWithOtp({
+        email: formData.email.trim(),
         options: {
+          shouldCreateUser: true,
           data: {
             name: formData.name,
+            whatsapp: formData.whatsapp,
           },
         },
       });
@@ -85,12 +81,12 @@ function SignUpForm({
         return;
       }
 
-      if (authData.user) {
-        onNext();
-      }
+      onNext();
     } catch (err) {
       setError("An error occurred. Please try again.");
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -128,7 +124,7 @@ function SignUpForm({
 
 
     <div className="space-y-2">
-        <Label htmlFor="whatsapp">Whatsapp Digit</Label>
+        <Label htmlFor="whatsapp">Whatsapp No📱</Label>
         <div className="relative">
           <MessageCircle className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
           <Input
@@ -144,33 +140,6 @@ function SignUpForm({
               }
             }}
           />
-        </div>
-      </div>
-
-
-      <div className="space-y-2">
-        <Label htmlFor="password">Password</Label>
-        <div className="relative">
-          <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-          <Input
-            id="password"
-            type={showPassword ? "text" : "password"}
-            placeholder="Create a password"
-            className="pl-10 pr-10"
-            value={formData.password}
-            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-          />
-          <button
-            type="button"
-            onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-3 top-3 text-gray-400 hover:text-gray-600"
-          >
-            {showPassword ? (
-              <Eye className="h-4 w-4" /> 
-            ) : (
-              <EyeOff className="h-4 w-4" />
-            )}
-          </button>
         </div>
       </div>
 
@@ -201,13 +170,15 @@ function OTPForm({
   onBack,
   formData,
   setFormData,
-  loading 
+  loading,
+  setLoading
 }: { 
   onNext: () => void;
   onBack: () => void;
   formData: any;
   setFormData: (data: any) => void;
   loading: boolean;
+  setLoading: (loading: boolean) => void;
 }) {
   const [error, setError] = useState("");
   const [resendTimer, setResendTimer] = useState(30);
@@ -219,7 +190,7 @@ function OTPForm({
     }
   }, [resendTimer]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -228,11 +199,43 @@ function OTPForm({
       return;
     }
 
-    // Simulate OTP verification (in production, verify with Supabase)
-    if (formData.otp === "123456" || formData.otp.length === 6) {
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.auth.verifyOtp({
+        email: formData.email.trim(),
+        token: formData.otp,
+        type: 'email',
+      });
+
+      if (error) {
+        setError(error.message || "Invalid verification code");
+        return;
+      }
+
+      // Ensure a session is actually established after verification
+      const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
+      if (sessionError) {
+        setError(sessionError.message || "Verification failed");
+        return;
+      }
+      if (!sessionData?.session) {
+        setError("Invalid or expired code. Please try again.");
+        return;
+      }
+
+      // Double-check user exists and email matches
+      const { data: userData } = await supabase.auth.getUser();
+      if (!userData?.user || userData.user.email?.toLowerCase() !== formData.email.trim().toLowerCase()) {
+        setError("Verification failed. Please ensure you entered the correct code.");
+        return;
+      }
+
       onNext();
-    } else {
-      setError("Invalid verification code");
+    } catch (err) {
+      setError("An error occurred during verification");
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -282,9 +285,27 @@ function OTPForm({
           variant="link"
           className="text-gray-500"
           disabled={resendTimer > 0}
-          onClick={() => {
-            setResendTimer(30);
-            // Simulate resend
+          onClick={async () => {
+            setError("");
+            try {
+              const { error: resendError } = await supabase.auth.signInWithOtp({
+                email: formData.email.trim(),
+                options: {
+                  shouldCreateUser: true,
+                  data: {
+                    name: formData.name,
+                    whatsapp: formData.whatsapp,
+                  },
+                },
+              });
+              if (resendError) {
+                setError(resendError.message || "Failed to resend code");
+                return;
+              }
+              setResendTimer(30);
+            } catch (e) {
+              setError("Failed to resend code");
+            }
           }}
         >
           {resendTimer > 0 ? `Resend code in ${resendTimer}s` : "Resend code"}
@@ -305,13 +326,15 @@ function PaymentForm({
   onBack,
   formData,
   setFormData,
-  loading 
+  loading,
+  setLoading
 }: { 
   onNext: () => void;
   onBack: () => void;
   formData: any;
   setFormData: (data: any) => void;
   loading: boolean;
+  setLoading: (loading: boolean) => void;
 }) {
   const [error, setError] = useState("");
 
@@ -332,6 +355,7 @@ function PaymentForm({
       return;
     }
 
+    setLoading(true);
     try {
       // Create subscription record with 'pending' status
       const { data: { user } } = await supabase.auth.getUser();
@@ -365,10 +389,15 @@ function PaymentForm({
         }
 
         onNext();
+      } else {
+        setError("You must complete email verification before payment.");
+        return;
       }
     } catch (err) {
       setError("Payment failed. Please try again.");
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -606,7 +635,6 @@ function SignupContent() {
     name: "",
     email: "",
     whatsapp: "+",
-    password: "",
     otp: "",
     cardNumber: "",
     expiry: "",
@@ -664,6 +692,7 @@ function SignupContent() {
                   formData={formData}
                   setFormData={setFormData}
                   loading={loading}
+                  setLoading={setLoading}
                 />
               )}
 
@@ -674,6 +703,7 @@ function SignupContent() {
                   formData={formData}
                   setFormData={setFormData}
                   loading={loading}
+                  setLoading={setLoading}
                 />
               )}
 
@@ -684,6 +714,7 @@ function SignupContent() {
                   formData={formData}
                   setFormData={setFormData}
                   loading={loading}
+                  setLoading={setLoading}
                 />
               )}
 

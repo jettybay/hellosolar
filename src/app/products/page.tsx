@@ -21,65 +21,100 @@ interface Product {
   image: string;
   imageAlt: string;
   imageDescription: string;
-  features: string[];
+  price: string;
+  features?: string[];
 }
 
 const products: Product[] = [
   {
-    title: "Solar Panels",
+    title: "500W/1000kWh Solar Generator (Wall-Mount, No Panel)",
     description:
-      "High-efficiency solar panels designed for residential, commercial, and industrial energy needs. Capture the power of the sun and convert it into clean, renewable electricity for your home or business.",
-    icon: <Sun />,
-    image: "/images/Solar System.jpeg",
-    imageAlt: "Solar panels installed on a rooftop",
-    imageDescription: "Premium monocrystalline solar panels with high conversion efficiency",
-    features: [
-      "High power output",
-      "Durable & weather-resistant",
-      "Long lifespan warranty",
-    ],
-  },
-  {
-    title: "Inverters",
-    description:
-      "Reliable inverters that ensure stable power conversion and system performance. Our inverters deliver pure sine wave output for safe operation of all your appliances and electronics.",
+      "Compact wall-mounted backup power solution for essential loads. Solar panel not included.",
     icon: <Zap />,
-    image: "/images/Inverter.jpeg",
-    imageAlt: "Modern inverter device",
-    imageDescription: "Advanced pure sine wave inverter with smart energy management",
-    features: [
-      "Pure sine wave output",
-      "Smart energy management",
-      "Supports hybrid systems",
-    ],
+    image: "/images/500w:1000kwh.jpeg",
+    imageAlt: "500W/1000kWh wall-mounted solar generator without panel",
+    imageDescription: "Reliable backup power in a compact, wall-mounted form factor",
+    price: "₦370,000",
   },
   {
-    title: "Batteries",
+    title: "1000W/2000kWh Solar Generator (Wall-Mount, No Panel)",
     description:
-      "Long-lasting battery solutions for energy storage and uninterrupted power supply. Store excess solar energy and enjoy reliable backup power during grid outages.",
+      "Higher-capacity wall-mounted solar generator for improved runtime. Solar panel not included.",
+    icon: <Zap />,
+    image: "/images/1000w:2000kwh.jpeg",
+    imageAlt: "1000W/2000kWh wall-mounted solar generator without panel",
+    imageDescription: "Stable pure power delivery for home and office essentials",
+    price: "₦580,000",
+  },
+  {
+    title: "25W Solar Fan",
+    description:
+      "Energy-efficient solar fan ideal for personal cooling with minimal power draw.",
+    icon: <Sun />,
+    image: "/images/25W Solar Fan.jpeg",
+    imageAlt: "25W solar-powered fan",
+    imageDescription: "Quiet, efficient airflow powered by the sun",
+    price: "₦65,000",
+  },
+  {
+    title: "200Ah Lead-Acid Battery",
+    description:
+      "A robust 200Ah lead-acid battery for dependable energy storage and backup power.",
     icon: <BatteryCharging />,
-    image: "/images/Installed Inverter.jpeg",
-    imageAlt: "Installed battery system",
-    imageDescription: "Deep-cycle lithium batteries with fast charging technology",
-    features: [
-      "Deep-cycle technology",
-      "Lithium & tubular options",
-      "Fast charging & safety protection",
-    ],
+    image: "/images/A lead-acid battery.jpeg",
+    imageAlt: "200Ah lead-acid battery",
+    imageDescription: "Durable, high-capacity storage for off-grid and backup systems",
+    price: "₦300,000",
   },
   {
-    title: "Protection & Accessories",
+    title: "Solar Table Fan 1",
     description:
-      "Complete range of solar accessories for system safety and performance optimization. From surge protectors to mounting structures, we have everything you need.",
-    icon: <ShieldCheck />,
-    image: "/images/Solar Street light.jpeg",
-    imageAlt: "Solar street light installation",
-    imageDescription: "Complete solar accessories including cables, mounts, and surge protection",
-    features: [
-      "Surge protectors",
-      "Charge controllers",
-      "Cables & mounting structures",
-    ],
+      "Compact solar table fan with consistent airflow for desks and bedside cooling.",
+    icon: <Sun />,
+    image: "/images/Solar table fan 1.jpeg",
+    imageAlt: "Solar table fan model 1",
+    imageDescription: "Portable solar-powered cooling solution for everyday use",
+    price: "₦55,000",
+  },
+  {
+    title: "Solar Table Fan 2",
+    description:
+      "Enhanced solar table fan with efficient blades and quiet operation.",
+    icon: <Sun />,
+    image: "/images/Solar table fan 2.jpeg",
+    imageAlt: "Solar table fan model 2",
+    imageDescription: "Reliable airflow with low power consumption",
+    price: "₦55,000",
+  },
+  {
+    title: "Solar Standing Fan",
+    description:
+      "Adjustable-height solar standing fan providing wide-area cooling.",
+    icon: <Sun />,
+    image: "/images/Solar standing fan.jpeg",
+    imageAlt: "Solar standing fan",
+    imageDescription: "Powerful solar-powered ventilation for larger rooms",
+    price: "₦65,000",
+  },
+  {
+    title: "2KW/1000W Solar Generator (No Panel)",
+    description:
+      "High-output solar generator for heavier loads. Solar panel not included.",
+    icon: <Zap />,
+    image: "/images/2KW:1000W.jpeg",
+    imageAlt: "2KW/1000W solar generator without panel",
+    imageDescription: "Reliable performance for appliances and office equipment",
+    price: "₦680,000",
+  },
+  {
+    title: "16KW / 51.2V Lithium Battery",
+    description:
+      "Premium lithium battery pack delivering high capacity and long cycle life.",
+    icon: <BatteryCharging />,
+    image: "/images/16KW: 51.2V.jpeg",
+    imageAlt: "16KW 51.2V lithium battery",
+    imageDescription: "High-density storage for advanced solar and backup systems",
+    price: "₦1,900,000",
   },
 ];
 
@@ -107,15 +142,14 @@ export default function ProductsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Premium Solar Products
+              Featured Products
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Explore our comprehensive range of high-quality solar solutions, 
-              designed to meet all your energy needs.
+              Explore our curated selection of solar solutions and accessories with transparent pricing.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <motion.div
                 key={index}
@@ -137,9 +171,14 @@ export default function ProductsPage() {
                   
                   {/* Icon Badge */}
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg">
-                    <div className="text-green-600 w-8 h-8">
-                      {product.icon}
-                    </div>
+                    <div className="text-green-600 w-8 h-8">{product.icon}</div>
+                  </div>
+
+                  {/* Price Badge */}
+                  <div className="absolute top-4 right-4">
+                    <span className="inline-flex items-center rounded-xl bg-green-600 text-white text-sm font-semibold px-3 py-2 shadow-lg ring-1 ring-white/20">
+                      {product.price}
+                    </span>
                   </div>
                   
                   {/* Image Description */}
@@ -152,33 +191,38 @@ export default function ProductsPage() {
 
                 {/* Content Section */}
                 <div className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 leading-snug">
                       {product.title}
                     </h3>
+                    <span className="shrink-0 inline-flex items-center rounded-lg bg-green-50 text-green-700 text-sm font-semibold px-3 py-1 ring-1 ring-green-100">
+                      {product.price}
+                    </span>
                   </div>
                   
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {product.description}
                   </p>
 
-                  <div className="space-y-3">
-                    {product.features.map((feature, i) => (
-                      <motion.li
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.1 }}
-                        className="flex items-center gap-3 text-gray-700"
-                      >
-                        <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                          <CheckCircle2 className="w-4 h-4 text-green-600" />
-                        </div>
-                        <span>{feature}</span>
-                      </motion.li>
-                    ))}
-                  </div>
+                  {product.features?.length ? (
+                    <div className="space-y-3">
+                      {product.features?.map((feature, i) => (
+                        <motion.li
+                          key={i}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: i * 0.1 }}
+                          className="flex items-center gap-3 text-gray-700"
+                        >
+                          <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                            <CheckCircle2 className="w-4 h-4 text-green-600" />
+                          </div>
+                          <span>{feature}</span>
+                        </motion.li>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
               </motion.div>
             ))}
@@ -224,12 +268,15 @@ export default function ProductsPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="text-green-400 mb-2">
-                      {product.icon}
+                    <div className="text-green-400 mb-2">{product.icon}</div>
+                    <div className="flex items-center justify-between gap-3 mb-1">
+                      <h4 className="text-white text-lg md:text-xl font-bold">
+                        {product.title}
+                      </h4>
+                      <span className="shrink-0 inline-flex items-center rounded-lg bg-white/15 text-white text-xs font-semibold px-2.5 py-1 ring-1 ring-white/20">
+                        {product.price}
+                      </span>
                     </div>
-                    <h4 className="text-white text-xl font-bold mb-1">
-                      {product.title}
-                    </h4>
                     <p className="text-gray-300 text-sm line-clamp-2">
                       {product.imageDescription}
                     </p>
