@@ -9,12 +9,12 @@ import {
   ShieldCheck,
   Truck,
   CheckCircle2,
-  ArrowRight,
   Camera,
   Home,
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ContactCenter from "@/components/ContactCenter";
 
 interface Product {
   title: string;
@@ -44,21 +44,21 @@ const products: Product[] = [
     ],
     category: "All in one product",
   },
-  {
-    title: "1000W / 2000kWh Solar Generator (Wall-Mount, Without Panel)",
-    description: "Reliable power for medium loads with intelligent protection.",
-    price: "₦580,000",
-    icon: <Zap />,
-    image: "/images/1000w:2000kwh.jpeg",
-    imageAlt: "1000W/2000kWh wall-mounted solar generator without panel",
-    imageDescription: "Stable output for TVs, routers, lighting and more",
-    features: [
-      "Advanced protections",
-      "Fast charge-ready",
-      "Wall-mount enclosure",
-    ],
-    category: "All in one product",
-  },
+  // {
+  //   title: "1000W / 2000kWh Solar Generator (Wall-Mount, Without Panel)",
+  //   description: "Reliable power for medium loads with intelligent protection.",
+  //   price: "₦580,000",
+  //   icon: <Zap />,
+  //   image: "/images/1000W:2000kwh no panel.jpeg",
+  //   imageAlt: "1000W/2000kWh wall-mounted solar generator without panel",
+  //   imageDescription: "Stable output for TVs, routers, lighting and more",
+  //   features: [
+  //     "Advanced protections",
+  //     "Fast charge-ready",
+  //     "Wall-mount enclosure",
+  //   ],
+  //   category: "All in one product",
+  // },
   {
     title: "25W Solar Fan",
     description: "Energy-efficient fan powered by the sun for cooling anywhere.",
@@ -150,21 +150,6 @@ const products: Product[] = [
     category: "All in one product",
   },
   {
-    title: "16kW / 51.2V Lithium Battery",
-    description: "High-density lithium storage for robust, long-life performance.",
-    price: "₦1,900,000",
-    icon: <BatteryCharging />,
-    image: "/images/16KW: 51.2V.jpeg",
-    imageAlt: "16kW 51.2V lithium battery module",
-    imageDescription: "Compact rack-mount lithium storage",
-    features: [
-      "Long cycle life",
-      "Fast charging",
-      "BMS safety features",
-    ],
-    category: "Others",
-  },
-  {
     title: "4G Solar CCTV Camera",
     description: "1080P security camera with 360° coverage, dual lens, and solar panel included.",
     price: "₦95,000",
@@ -252,6 +237,21 @@ const products: Product[] = [
       "Advanced energy storage",
     ],
     category: "All in one product",
+  },
+  {
+    title: "220Ah 12V Tubular Tall Battery",
+    description: "High-performance tubular battery for reliable energy storage.",
+    price: "₦350,000",
+    icon: <BatteryCharging />,
+    image: "/images/220Ah 12V Tubular Tall Battery.jpeg",
+    imageAlt: "220Ah 12V Tubular Tall Battery",
+    imageDescription: "Long-lasting tubular design",
+    features: [
+      "Deep cycle capability",
+      "Low maintenance",
+      "Long service life",
+    ],
+    category: "Others",
   },
 ];
 
@@ -640,6 +640,8 @@ export default function ProductsPage() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <ContactCenter />
 
       <Footer />
     </main>

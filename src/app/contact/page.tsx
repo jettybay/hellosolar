@@ -14,6 +14,7 @@ import { FaTiktok } from "react-icons/fa";
 import Footer from "@/components/Footer";
 import FloatingChat from "@/components/FloatingChat";
 import Navbar from "@/components/Navbar";
+import ContactCenter from "@/components/ContactCenter";
 
 export default function ContactPage() {
   return (
@@ -156,6 +157,7 @@ export default function ContactPage() {
       </section>
 
       <Footer />
+      <ContactCenter />
       <FloatingChat />
     </main>
     </>

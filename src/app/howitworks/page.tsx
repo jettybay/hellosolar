@@ -32,6 +32,7 @@ import { Badge } from "@/components/ui/badge";
 import FloatingChat from "@/components/FloatingChat";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ContactCenter from "@/components/ContactCenter";
 
 // Step Card Component
 function StepCard({
@@ -637,6 +638,7 @@ export default function HowItWorksPage() {
         </section>
 
         <Footer />
+        <ContactCenter />
 
         {/* Floating Chat Component */}
         <FloatingChat />

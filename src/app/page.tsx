@@ -21,6 +21,7 @@ import { Badge } from "@/components/ui/badge";
 import FloatingChat from "@/components/FloatingChat";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactCenter from "@/components/ContactCenter";
 
 export default function HomePage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -322,6 +323,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <Footer />
+      <ContactCenter />
 
       {/* Image Modal */}
       <AnimatePresence>
