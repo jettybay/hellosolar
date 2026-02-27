@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -11,6 +10,8 @@ import {
   Truck,
   CheckCircle2,
   ArrowRight,
+  Camera,
+  Home,
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -153,6 +154,90 @@ const products: Product[] = [
       "BMS safety features",
     ],
   },
+  {
+    title: "4G Solar CCTV Camera",
+    description: "1080P security camera with 360° coverage, dual lens, and solar panel included.",
+    price: "₦95,000",
+    icon: <Camera />,
+    image: "/images/4G Solar CCTV Camera.jpeg",
+    imageAlt: "4G Solar CCTV Camera with solar panel",
+    imageDescription: "360° coverage with dual lens and built-in batteries",
+    features: [
+      "1080P resolution, 360° coverage",
+      "Dual lens, 4X Digital Zoom",
+      "Smart AI humanoid detection",
+      "Smart IR/Color night vision",
+      "Pan 270° / Tilt 90°",
+      "Two-way voice intercom",
+      "4G-SIM card connection",
+      "IP66 waterproof for outdoor use",
+      "128GB SD & cloud storage support",
+    ],
+  },
+  {
+    title: "All In One Solar System",
+    description: "1.2KW solar power inverter with combined PV controller and 1.5KWH lithium battery.",
+    price: "₦650,000",
+    icon: <Home />,
+    image: "/images/All In One Solar System.jpeg",
+    imageAlt: "All in one solar system with inverter and battery",
+    imageDescription: "Complete solar solution with integrated components",
+    features: [
+      "1.2KW power inverter",
+      "1.5KWH lithium battery included",
+      "Combined PV controller",
+      "All-in-one design",
+    ],
+  },
+  {
+    title: "A10 Power Tank",
+    description: "500W + 1000Wh portable energy storage system with 410W PV panel included.",
+    price: "₦750,000",
+    icon: <BatteryCharging />,
+    image: "/images/A10 Power Tank.jpeg",
+    imageAlt: "A10 Power Tank portable energy storage",
+    imageDescription: "3-in-1 household ESS with fast charge capability",
+    features: [
+      "500W + 1000Wh capacity",
+      "410W PV panel included",
+      "UPS class switch time",
+      "Class-A LiFePO4 battery",
+      "Fast charge capability",
+      "High performance inverter",
+    ],
+  },
+  {
+    title: "1000W/2000kWh Solar Generator (Wall Mount with Two Panels)",
+    description: "Complete wall-mounted solar generator system with dual solar panels included.",
+    price: "₦880,000",
+    icon: <Zap />,
+    image: "/images/1000W 2000kwh with panels.jpeg",
+    imageAlt: "1000W/2000kWh solar generator with two panels",
+    imageDescription: "Complete system with dual panels for maximum efficiency",
+    features: [
+      "1000W power output",
+      "2000kWh energy storage",
+      "Two solar panels included",
+      "Wall-mount design",
+      "Complete installation kit",
+    ],
+  },
+  {
+    title: "Home and Outdoor All In One Inverter Energy Storage",
+    description: "1000W/2000kWh LiFePO4 battery solar generator for home and outdoor use.",
+    price: "₦580,000",
+    icon: <Home />,
+    image: "/images/Home Outdoor All In One.jpeg",
+    imageAlt: "Home and outdoor all-in-one inverter energy storage",
+    imageDescription: "Versatile LiFePO4 battery system for indoor and outdoor use",
+    features: [
+      "1000W/2000kWh capacity",
+      "LiFePO4 battery technology",
+      "Wall-mount without panel",
+      "Home and outdoor compatible",
+      "Advanced energy storage",
+    ],
+  },
 ];
 
 const stats = [
@@ -161,6 +246,7 @@ const stats = [
   { value: "5MW+", label: "Solar Capacity" },
   { value: "5 Years", label: "Warranty" },
 ];
+
 
 export default function ProductsPage() {
   const [lightbox, setLightbox] = useState<null | { src: string; alt: string; title: string; price?: string }>(null);
