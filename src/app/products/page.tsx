@@ -25,6 +25,7 @@ interface Product {
   imageAlt: string;
   imageDescription: string;
   features: string[];
+  category: string;
 }
 
 const products: Product[] = [
@@ -41,6 +42,7 @@ const products: Product[] = [
       "Low noise, high efficiency",
       "Ideal for small appliances",
     ],
+    category: "All in one product",
   },
   {
     title: "1000W / 2000kWh Solar Generator (Wall-Mount, Without Panel)",
@@ -55,6 +57,7 @@ const products: Product[] = [
       "Fast charge-ready",
       "Wall-mount enclosure",
     ],
+    category: "All in one product",
   },
   {
     title: "25W Solar Fan",
@@ -69,6 +72,7 @@ const products: Product[] = [
       "Low power consumption",
       "Solar-ready charging",
     ],
+    category: "Solar Fan",
   },
   {
     title: "A Lead‑Acid Battery with a Sufficient Capacity of 200Ah",
@@ -83,6 +87,7 @@ const products: Product[] = [
       "Rugged build",
       "Maintenance-friendly",
     ],
+    category: "Others",
   },
   {
     title: "Solar Table Fan 1",
@@ -97,6 +102,7 @@ const products: Product[] = [
       "Energy saving",
       "USB/solar charging",
     ],
+    category: "Solar Fan",
   },
   {
     title: "Solar Table Fan 2",
@@ -111,6 +117,7 @@ const products: Product[] = [
       "Low power draw",
       "Multiple speed modes",
     ],
+    category: "Solar Fan",
   },
   {
     title: "Solar Standing Fan",
@@ -125,6 +132,7 @@ const products: Product[] = [
       "Oscillation control",
       "Energy efficient",
     ],
+    category: "Solar Fan",
   },
   {
     title: "2kW / 1000W Solar Generator (Without Panel)",
@@ -139,6 +147,7 @@ const products: Product[] = [
       "Overload protection",
       "Expandable system",
     ],
+    category: "All in one product",
   },
   {
     title: "16kW / 51.2V Lithium Battery",
@@ -153,6 +162,7 @@ const products: Product[] = [
       "Fast charging",
       "BMS safety features",
     ],
+    category: "Others",
   },
   {
     title: "4G Solar CCTV Camera",
@@ -173,6 +183,7 @@ const products: Product[] = [
       "IP66 waterproof for outdoor use",
       "128GB SD & cloud storage support",
     ],
+    category: "Others",
   },
   {
     title: "All In One Solar System",
@@ -188,6 +199,7 @@ const products: Product[] = [
       "Combined PV controller",
       "All-in-one design",
     ],
+    category: "All in one product",
   },
   {
     title: "A10 Power Tank",
@@ -205,6 +217,7 @@ const products: Product[] = [
       "Fast charge capability",
       "High performance inverter",
     ],
+    category: "All in one product",
   },
   {
     title: "1000W/2000kWh Solar Generator (Wall Mount with Two Panels)",
@@ -221,6 +234,7 @@ const products: Product[] = [
       "Wall-mount design",
       "Complete installation kit",
     ],
+    category: "All in one product",
   },
   {
     title: "Home and Outdoor All In One Inverter Energy Storage",
@@ -237,6 +251,7 @@ const products: Product[] = [
       "Home and outdoor compatible",
       "Advanced energy storage",
     ],
+    category: "All in one product",
   },
 ];
 
@@ -283,8 +298,15 @@ export default function ProductsPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {products.map((product, index) => (
+          {["All in one product", "Solar Fan", "Others"].map((category) => (
+            <div key={category} className="mb-20">
+              <h3 className="text-2xl font-bold mb-8 text-gray-800 border-l-4 border-green-600 pl-4">
+                {category}
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                {products
+                  .filter((product) => product.category === category)
+                  .map((product, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
@@ -360,7 +382,9 @@ export default function ProductsPage() {
                 </div>
               </motion.div>
             ))}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
