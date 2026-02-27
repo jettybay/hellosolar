@@ -190,7 +190,7 @@ const products: Product[] = [
     description: "1.2KW solar power inverter with combined PV controller and 1.5KWH lithium battery.",
     price: "₦650,000",
     icon: <Home />,
-    image: "/images/All In One Solar System.jpeg",
+    image: "/images/Inverter combined.jpeg",
     imageAlt: "All in one solar system with inverter and battery",
     imageDescription: "Complete solar solution with integrated components",
     features: [
@@ -224,7 +224,7 @@ const products: Product[] = [
     description: "Complete wall-mounted solar generator system with dual solar panels included.",
     price: "₦880,000",
     icon: <Zap />,
-    image: "/images/1000W 2000kwh with panels.jpeg",
+    image: "/images/1000W:2000kwh solar generator.jpeg",
     imageAlt: "1000W/2000kWh solar generator with two panels",
     imageDescription: "Complete system with dual panels for maximum efficiency",
     features: [
@@ -241,7 +241,7 @@ const products: Product[] = [
     description: "1000W/2000kWh LiFePO4 battery solar generator for home and outdoor use.",
     price: "₦580,000",
     icon: <Home />,
-    image: "/images/Home Outdoor All In One.jpeg",
+    image: "/images/1000W:2000kwh no panel.jpeg",
     imageAlt: "Home and outdoor all-in-one inverter energy storage",
     imageDescription: "Versatile LiFePO4 battery system for indoor and outdoor use",
     features: [
