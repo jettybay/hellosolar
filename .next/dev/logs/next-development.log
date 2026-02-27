@@ -88,3 +88,4 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [10:51:34.849] Browser WARN    Image with src "/images/4G Solar CCTV Camera.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [10:51:34.849] Browser WARN    Image with src "/images/A lead-acid battery.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [10:52:42.705] Server  LOG     ✓ Compiled in 443ms
+[11:16:07.918] Server  LOG     ✓ Compiled in 558ms

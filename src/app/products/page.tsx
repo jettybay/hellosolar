@@ -154,7 +154,7 @@ const products: Product[] = [
     description: "1080P security camera with 360° coverage, dual lens, and solar panel included.",
     price: "₦95,000",
     icon: <Camera />,
-    image: "/images/4G Solar CCTV Camera.jpeg",
+    image: "/images/4G Solar CCTV CAMERA.jpeg",
     imageAlt: "4G Solar CCTV Camera with solar panel",
     imageDescription: "360° coverage with dual lens and built-in batteries",
     features: [
@@ -191,7 +191,7 @@ const products: Product[] = [
     description: "500W + 1000Wh portable energy storage system with 410W PV panel included.",
     price: "₦750,000",
     icon: <BatteryCharging />,
-    image: "/images/A10 Power Tank.jpeg",
+    image: "/images/A10 power tank.jpeg",
     imageAlt: "A10 Power Tank portable energy storage",
     imageDescription: "3-in-1 household ESS with fast charge capability",
     features: [
