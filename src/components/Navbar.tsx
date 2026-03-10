@@ -12,6 +12,7 @@ export default function Navbar() {
     { label: "How It Works", href: "./howitworks" },
     { label: "Support", href: "/chat" },
     { label: "Products", href: "./products" },
+    { label: "Solar Connect", href: "./solarconnect" },
     { label: "Contact", href: "./contact" },
   ];
 
