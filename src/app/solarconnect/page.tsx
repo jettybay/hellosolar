@@ -61,6 +61,38 @@ export default function SolarConnectPage() {
               </p>
             </motion.div>
 
+             <div>
+       
+        {/* GOOGLE FORM LINK */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-12 text-center"
+            >
+              <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-8 md:p-12 text-white max-w-2xl mx-auto">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                  Fill The Form.
+                </h3>
+                <p className="text-green-100 mb-8 max-w-2xl mx-auto">
+                  Fill out our detailed form and our team will get back to you with personalized solar solutions.
+                </p>
+                <a
+                  href="https://forms.gle/SkZJKRxkwzNL1mWo7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-white text-green-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+                >
+                  Fill Out the Form
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </motion.div>
+            </div>
+
             {/* FEATURES */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -93,6 +125,7 @@ export default function SolarConnectPage() {
             </motion.div>
           </div>
         </section>
+
 
         {/* Q&A SECTION */}
         <section className="py-16 bg-white">
@@ -147,35 +180,7 @@ export default function SolarConnectPage() {
               />
             </motion.div>
 
-            {/* GOOGLE FORM LINK */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-12 text-center"
-            >
-              <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-8 md:p-12 text-white">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  Ready to Get Started?
-                </h3>
-                <p className="text-green-100 mb-8 max-w-2xl mx-auto">
-                  Fill out our detailed form and our team will get back to you with personalized solar solutions.
-                </p>
-                <a
-                  href="https://forms.gle/SkZJKRxkwzNL1mWo7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-white text-green-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
-                >
-                  Fill Out the Form
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-            </motion.div>
-          </div>
+        </div>
         </section>
 
         {/* CONTACT INFO SECTION */}
