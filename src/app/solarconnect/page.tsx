@@ -78,17 +78,26 @@ export default function SolarConnectPage() {
                 <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                   Fill out our detailed form and our team will get back to you with personalized solar solutions.
                 </p>
-                <a
+                <motion.a
                   href="https://forms.gle/SkZJKRxkwzNL1mWo7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-white text-green-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+                  animate={{
+                    scale: [1, 1.05, 1],
+                    transition: {
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                  }}
+                  whileHover={{ scale: 1.1 }}
                 >
-                  Fill Out the Form
+                  Fill Out The Form
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
-                </a>
+                </motion.a>
               </div>
             </motion.div>
             </div>
@@ -283,4 +292,3 @@ function QAItem({
     </div>
   );
 }
-

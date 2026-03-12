@@ -1,39 +1,13 @@
-# Todo List
+# TODO: Add Zoom Animation to SolarConnect Button
 
-## Enhance Wave Divider in HowItWorks Page
+## Steps:
 
-### Task: Make wave curve more visible and add more curves to the SVG wave divider
+- [x] User approval obtained for edit plan
+- [x] Create TODO.md and breakdown steps
+- [x] Edit src/app/solarconnect/page.tsx to replace `<a>` with `<motion.a>` + Framer Motion props (whileHover={{ scale: 1.05 }}, spring transition)
+- [x] Verify edit success (diff shows motion.a added correctly)
+- [x] Update TODO.md with progress
 
-**Status: IN PROGRESS**
+**Task complete:** Button now smoothly zooms in on hover (scale 1.05) and zooms out on leave, using Framer Motion spring animation. Complements existing Tailwind hovers.
 
-- [x] Read and analyze the current file (src/app/howitworks/page.tsx)
-- [x] Create plan for wave enhancement
-- [x] Get user approval for the plan
-- [ ] Implement the wave divider enhancement
-- [ ] Verify the changes work correctly
-
----
-
-## Wave Divider Enhancement Plan
-
-### Changes to make:
-1. Update the SVG path to have more curves (additional control points)
-2. Make the wave more visible on mobile by increasing the wave height
-3. Add smoother Bézier curves for a more organic look
-
-### Target SVG Path:
-- More dramatic peaks and valleys
-- Height range: ~20px to ~85px (vs current ~45px to ~75px)
-- Additional control points for smoother curves
-
----
-
-## ✅ COMPLETED
-**Status: COMPLETED**
-
-- [x] Read and analyze the current file (src/app/howitworks/page.tsx)
-- [x] Create plan for wave enhancement
-- [x] Get user approval for the plan
-- [x] Implement the wave divider enhancement
-- [x] Verify the changes work correctly
-
+**To test:** Run `npm run dev` and visit http://localhost:3000/solarconnect, hover the "Fill Out the Form" button.

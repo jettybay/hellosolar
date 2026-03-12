@@ -1,11 +1,8 @@
-[00:00:07.755] Server  LOG     ✓ Ready in 5.8s
-[00:00:41.410] Server  LOG     ○ Compiling / ...
-[00:00:51.931] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:00:54.883] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:37.603] Server  LOG     ✓ Compiled in 11.5s
-[00:03:51.212] Server  LOG     ✓ Compiled in 1661ms
-[00:04:17.648] Server  LOG     ✓ Compiled in 1646ms
-[00:07:25.852] Server  LOG     ✓ Compiled in 3.6s
-[00:07:29.501] Server  LOG     ✓ Compiled in 1777ms
-[00:08:24.327] Server  LOG     ✓ Compiled in 2.8s
-[00:08:58.773] Server  LOG     ✓ Compiled in 4s
+[00:00:01.494] Server  LOG     ✓ Ready in 1071ms
+[00:00:08.502] Server  LOG     ○ Compiling / ...
+[00:00:09.177] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:09.895] Server  WARN    ⚠ Cross origin request detected from 10.186.101.176 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:10.069] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:44.528] Server  LOG     ✓ Compiled in 839ms
+[00:10:47.296] Server  LOG     ✓ Compiled in 457ms
