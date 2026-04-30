@@ -8,23 +8,23 @@ import Navbar from "@/components/Navbar";
 import ContactCenter from "@/components/ContactCenter";
 import FloatingChat from "@/components/FloatingChat";
 
-export default function SolarConnectPage() {
+export default function GetQuotePage() {
   return (
     <>
       <Navbar />
       <main className="bg-white text-gray-900 overflow-hidden">
-        {/* BANNER SECTION */}
-        <section className="relative h-[400px] md:h-[500px] w-full">
+{/* BANNER SECTION */}
+        <section className="relative h-[400px] md:h-[500px] w-[100vw] -mx-[calc(50vw-50%)] bg-green-600">
           <Image
-            src="/images/Connect banner.jpeg"
-            alt="Solar Connect Banner"
+            src="/images/Connectbanner.jpeg"
+            alt="Get Quote Banner"
             fill
-            className="object-cover"
+            className="object-contain"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-green-700/60" />
+          <div className="absolute inset-0 bg-gray-800/20" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
@@ -36,7 +36,7 @@ export default function SolarConnectPage() {
               <p className="text-xl md:text-2xl text-green-100 max-w-2xl mx-auto">
                 Your Gateway to a Connected, Sustainable Future
               </p>
-            </motion.div>
+            </motion.div> */}
           </div>
         </section>
 
@@ -51,14 +51,23 @@ export default function SolarConnectPage() {
               className="text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Welcome to SolarConnect
+                Get a Quote Today
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                Your trusted platform for a connected, sustainable future. 
-                Whether you're a homeowner, a business, or just curious, SolarConnect 
-                links you to a nationwide solar community. Sign up today for personalized 
-                support, exclusive offers, and expert guidance on your solar journey.
-              </p>
+              <div className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto space-y-4">
+                <p>
+              Power your home or business with reliable, cost-effective solar solutions from Solar Slot Limited.
+              Whether you’re looking to reduce your electricity bills, escape constant power outages, 
+              or invest in clean energy, we’re here to design the perfect system tailored to your needs.
+                </p>
+                <p>
+                  Getting started is simple. Tell us about your energy requirements, and our team will provide you 
+                with a customized solar quotation that matches your budget, location, and usage. From small residential 
+                setups to large commercial installations, we deliver solutions that guarantee efficiency, durability, 
+                and long-term savings.
+                </p>
+                <p>At Solar Slot Limited, we don’t just sell solar systems — we deliver power, peace of mind, and energy independence.</p>
+                <p>👉 Request your quote today and take the first step towards uninterrupted power.</p>
+              </div>
             </motion.div>
 
              <div>

@@ -65,6 +65,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../src/app/getquote/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/getquote">> = Specific
+  const handler = {} as typeof import("../../../src/app/getquote/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../src/app/howitworks/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/howitworks">> = Specific
@@ -87,15 +96,6 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/products">> = Specific
   const handler = {} as typeof import("../../../src/app/products/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../../src/app/solarconnect/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/solarconnect">> = Specific
-  const handler = {} as typeof import("../../../src/app/solarconnect/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
