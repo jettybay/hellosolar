@@ -61,7 +61,7 @@ export default function ContactPage() {
               <ContactItem
                 icon={<MapPin />}
                 title="Office Address"
-                text="A10 Suite, Staklin Plaza, 7 Akowonjo Road, Egba, Lagos State."
+                text="A10 Suite, Staklin Plaza, 7 Akowonjo Road, Egbeda, Lagos State."
               />
 
               <ContactItem
