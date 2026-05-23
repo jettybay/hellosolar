@@ -95,8 +95,7 @@ export default function ContactCenter() {
                         href="tel:+2348158780400"
                         className="text-sm font-bold text-gray-900 hover:text-green-700"
                       >
-                        +234 815 878 0400
-                      </a>
+                        +234 704 505 2537                      </a>
                     </div>
                   </div>
                 </div>
