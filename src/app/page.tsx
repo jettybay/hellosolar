@@ -99,7 +99,7 @@ export default function HomePage() {
 
         <section>
         <h3 className="text-center text-2xl font-semibold mt-8 mb-4">
-          Click <a className="text-red-500" href="https://ytfinancehq.com/solar.html?s=solar-slot-limited">here</a> to check more of our product store
+          Click <a className="text-red-500" href="https://ytfinancehq.com/solar.html?s=solar-slot-limited">here</a> to check more from our product store.
         </h3>
 </section>
 
