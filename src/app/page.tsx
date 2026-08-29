@@ -96,6 +96,13 @@ export default function HomePage() {
       {/* =========================
           PROMOTIONAL ADS
       ========================== */}
+
+        <section>
+        <h3 className="text-center text-2xl font-semibold mt-8 mb-4">
+          Click <a className="text-red-500" href="https://ytfinancehq.com/solar.html?s=solar-slot-limited">here</a> to check more of our product store
+        </h3>
+</section>
+
       <section className="py-12 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 items-center">
